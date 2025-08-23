@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Emenent Times</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --newsprint: #f6f1e5;
+    --headline: #2c2c2c;
+    --byline: #555;
+    --column-rule: #ccc;
+    --ink: #333;
+    --accent: #8b0000;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: #d9cdb4;
+    color: var(--ink);
+    font-family: 'Merriweather', serif;
+    line-height: 1.55;
+    overflow-x: hidden;
+    padding: 20px 0;
+  }
+
+  .newspaper-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--newsprint);
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    position: relative;
+    border: 1px solid #b5a88a;
+  }
+  
+  /* Navbar */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--newsprint);
+    border-bottom: 2px solid var(--ink);
+    border-top: 1px solid var(--ink);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Playfair Display', serif;
+  }
+  header.scrolled { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid var(--ink);
+    padding: 5px 10px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  .logo:hover {
+    transform: translate(2px,2px);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--ink);
+    position: relative;
+    font-variant: small-caps;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+  }
+  nav a:hover { color: var(--accent); }
+  nav a.active {
+    color: var(--accent);
+    font-weight: bold;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+  nav a:hover::after, nav a.active::after { width: 100%; }
+
+  /* Hamburger for mobile */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink);
+    padding: 5px;
+    z-index: 1001;
+  }
+
+  /* Mobile menu styles */
+  .mobile-menu-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu-container.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background-color: var(--newsprint);
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    overflow-y: auto;
+  }
+
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--column-rule);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav a:hover, .mobile-nav a.active {
+    color: var(--accent);
+    background-color: rgba(139,0,0,0.05);
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink);
+    padding: 5px;
+  }
+
+  @media (max-width: 768px) {
+    .newspaper-container {
+      padding: 15px;
+    }
+    
+    header {
+      padding: 10px 15px;
+    }
+    
+    .logo {
+      font-size: 1rem;
+      padding: 4px 8px;
+    }
+    
+    nav {
+      display: none;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+  }
+
+  /* Newspaper Header */
+  .newspaper-header {
+    text-align: center;
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 15px;
+    margin: 25px 0;
+    position: relative;
+  }
+  .newspaper-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--headline);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    line-height: 1.1;
+  }
+  .newspaper-date {
+    font-style: italic;
+    color: var(--byline);
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  .newspaper-tagline {
+    font-style: italic;
+    margin-top: 5px;
+    color: var(--byline);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .newspaper-volume {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-style: italic;
+    color: var(--byline);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .newspaper-header {
+      margin: 15px 0;
+      padding-bottom: 10px;
+    }
+    
+    .newspaper-volume {
+      position: static;
+      margin-bottom: 5px;
+    }
+    
+    .newspaper-tagline {
+      font-size: 1rem;
+    }
+  }
+
+  .paper-edge {
+    height: 5px;
+    background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.1) 90%, transparent 100%);
+    margin: 20px 0;
+  }
+
+  /* Buttons below title */
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0 40px 0;
+  }
+  .btn {
+    background-color: var(--newsprint);
+    color: var(--ink);
+    border:1px solid var(--ink);
+    padding:12px 20px;
+    font-family: 'Georgia', serif;
+    font-size:1rem;
+    cursor:pointer;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    box-shadow:3px 3px 0px rgba(0,0,0,0.1);
+    position:relative;
+    overflow:hidden;
+    transition:all 0.3s ease;
+    min-width: 160px;
+    text-align: center;
+  }
+  .btn::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgba(139,0,0,0.1),transparent);
+    transition:all 0.4s ease;
+  }
+  .btn:hover::before { left:100%; }
+  .btn:hover {
+    background-color: rgba(139,0,0,0.05);
+    transform: translate(2px,2px);
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .btn-group {
+      flex-direction: column;
+      align-items: center;
+      margin: 15px 0 30px 0;
+    }
+    
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 20px;
+    }
+  }
+
+  /* Columns for articles */
+  .columns {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule:1px solid var(--column-rule);
+    margin: 40px 0;
+    padding: 0 10px;
+    text-align: justify;
+  }
+  .columns p {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.05rem;
+    text-indent: 1.5em;
+    line-height: 1.6;
+    hyphens: auto;
+  }
+  .columns p:first-child::first-letter {
+    font-size: 3rem;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+    color: var(--accent);
+    margin-right: 5px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  @media (max-width: 992px) {
+    .columns {
+      column-count: 2;
+      column-gap: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .columns { 
+      column-count: 1;
+      margin: 30px 0;
+      padding: 0 5px;
+    }
+    
+    .columns p {
+      font-size: 1rem;
+      text-indent: 1em;
+      line-height: 1.6;
+      hyphens: auto;
+    }
+    
+    .columns p:first-child::first-letter {
+      font-size: 2.5rem;
+    }
+  }
+
+  footer {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--byline);
+    border-top: 2px solid var(--ink);
+    font-style: italic;
+  }
+  
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      font-size: 0.85rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="newspaper-container">
+
+  <!-- Navbar -->
+  <header id="navbar">
+    <div class="logo" onclick="location.href='index.html'">The Emenent Times</div>
+    <button class="hamburger" onclick="openMobileMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html" class="active">home</a>
+      <a href="resources.html">resources</a>
+      <a href="blog.html">blog</a>
+      <a href="contactus.html">contact</a>
+    </nav>
+    
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-container" id="mobile-menu-container" onclick="closeMobileMenu()"></div>
+    
+    <!-- Mobile menu -->
+    <div class="mobile-nav" id="mobile-nav">
+      <button class="close-menu" onclick="closeMobileMenu()">×</button>
+      <a href="index.html" class="active">home</a>
+      <a href="resources.html">resources</a>
+      <a href="blog.html">blog</a>
+      <a href="contactus.html">contact</a>
+    </div>
+  </header>
+
+  <!-- Newspaper header -->
+  <div class="newspaper-header">
+    <div class="newspaper-volume">VOL. MMXXV No. 1</div>
+    <div class="newspaper-date" id="current-date">Monday, January 1, 2025</div>
+    <h1 class="newspaper-title">The Emement Times</h1>
+    <div class="newspaper-tagline">- by emenents for emenents</div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="btn-group">
+    <button class="btn" onclick="location.href='resources.html'">Access Resources</button>
+    <button class="btn" onclick="location.href='blog.html'">Read Blog</button>
+    <button class="btn" onclick="location.href='contactus.html'">Contact Us</button>
+  </div>
+
+  <div class="paper-edge"></div>
+
+  <!-- Article -->
+  <div class="columns">
+    <p>Welcome to <em>The Emenent Times</em>, the unofficial therapy session for engineering students who still believe "sleep is for the weak." This is the place where we collectively mourn broken circuits, celebrate not blowing up the electronics labs, and exchange resources that may or may not have been discovered at 3 a.m. after a nervous breakdown. Here, you'll find blogs that sound suspiciously like group-therapy rants, survival hacks that barely hold our sanity together, and tips that are more about emotional damage control than actual efficiency. Because let's face it: nothing bonds engineering students tighter than mutual suffering over assignments that defy logic, projects that refuse to compile, and machines that worked perfectly yesterday but mysteriously collapse the second you show them to the professor. So grab your chai/energy drinks/coffee/idk whatever works for you, embrace the chaos, and remember you're not alone in this glorious struggle.</p>
+  </div>
+
+  <div class="paper-edge"></div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 The Emenent Times | Published by Emenents for Emenents | 
+    <a href="contactus.html">Contact Us</a>
+  </footer>
+</div>
+
+<script>
+  // Dynamic date
+  const now = new Date();
+  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+  document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+
+  // Navbar shadow
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if(window.scrollY > 10) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  });
+
+  // Mobile menu functions
+  function openMobileMenu() {
+    document.getElementById("mobile-nav").classList.add("active");
+    document.getElementById("mobile-menu-container").classList.add("active");
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    document.getElementById("mobile-nav").classList.remove("active");
+    document.getElementById("mobile-menu-container").classList.remove("active");
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close menu when clicking outside
+  document.getElementById('mobile-menu-container').addEventListener('click', closeMobileMenu);
+  
+  // Prevent closing when clicking on the menu itself
+  document.getElementById('mobile-nav').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+</script>
+
+</body>
+</html>

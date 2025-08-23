@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>University Breaks Ground on $50M Medical Research Center - The Emenent Times</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --newsprint: #f6f1e5;
+    --headline: #2c2c2c;
+    --byline: #555;
+    --column-rule: #ccc;
+    --ink: #333;
+    --accent: #8b0000;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: #d9cdb4;
+    color: var(--ink);
+    font-family: 'Merriweather', serif;
+    line-height: 1.55;
+    overflow-x: hidden;
+    padding: 20px 0;
+  }
+
+  .newspaper-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--newsprint);
+    box-shadow: 0 0 25px rgba(0,0,0,0.2);
+    position: relative;
+    border: 1px solid #b5a88a;
+  }
+  
+  /* Navbar */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--newsprint);
+    border-bottom: 2px solid var(--ink);
+    border-top: 1px solid var(--ink);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-family: 'Playfair Display', serif;
+  }
+  header.scrolled { box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: 1px solid var(--ink);
+    padding: 5px 10px;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+  .logo:hover {
+    transform: translate(2px,2px);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  }
+
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--ink);
+    position: relative;
+    font-variant: small-caps;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+  }
+  nav a:hover { color: var(--accent); }
+  nav a.active {
+    color: var(--accent);
+    font-weight: bold;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+  nav a:hover::after, nav a.active::after { width: 100%; }
+
+  /* Hamburger for mobile */
+  .hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink);
+    padding: 5px;
+    z-index: 1001;
+  }
+
+  /* Mobile menu styles */
+  .mobile-menu-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .mobile-menu-container.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    max-width: 300px;
+    height: 100%;
+    background-color: var(--newsprint);
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    overflow-y: auto;
+  }
+
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .mobile-nav a {
+    text-decoration: none;
+    color: var(--ink);
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--column-rule);
+    transition: all 0.3s ease;
+  }
+
+  .mobile-nav a:hover, .mobile-nav a.active {
+    color: var(--accent);
+    background-color: rgba(139,0,0,0.05);
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--ink);
+    padding: 5px;
+  }
+
+  @media (max-width: 768px) {
+    .newspaper-container {
+      padding: 15px;
+    }
+    
+    header {
+      padding: 10px 15px;
+    }
+    
+    .logo {
+      font-size: 1rem;
+      padding: 4px 8px;
+    }
+    
+    nav {
+      display: none;
+    }
+    
+    .hamburger {
+      display: block;
+    }
+  }
+
+  /* Newspaper Header */
+  .newspaper-header {
+    text-align: center;
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 15px;
+    margin: 25px 0;
+    position: relative;
+  }
+  .newspaper-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--headline);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    line-height: 1.1;
+  }
+  .newspaper-date {
+    font-style: italic;
+    color: var(--byline);
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  .newspaper-tagline {
+    font-style: italic;
+    margin-top: 5px;
+    color: var(--byline);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .newspaper-volume {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-style: italic;
+    color: var(--byline);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    .newspaper-header {
+      margin: 15px 0;
+      padding-bottom: 10px;
+    }
+    
+    .newspaper-volume {
+      position: static;
+      margin-bottom: 5px;
+    }
+    
+    .newspaper-tagline {
+      font-size: 1rem;
+    }
+  }
+
+  .paper-edge {
+    height: 5px;
+    background: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 10%, rgba(0,0,0,0.1) 90%, transparent 100%);
+    margin: 20px 0;
+  }
+
+  /* Buttons below title */
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0 40px 0;
+  }
+  .btn {
+    background-color: var(--newsprint);
+    color: var(--ink);
+    border:1px solid var(--ink);
+    padding:12px 20px;
+    font-family: 'Georgia', serif;
+    font-size:1rem;
+    cursor:pointer;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    box-shadow:3px 3px 0px rgba(0,0,0,0.1);
+    position:relative;
+    overflow:hidden;
+    transition:all 0.3s ease;
+    min-width: 160px;
+    text-align: center;
+  }
+  .btn::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgba(139,0,0,0.1),transparent);
+    transition:all 0.4s ease;
+  }
+  .btn:hover::before { left:100%; }
+  .btn:hover {
+    background-color: rgba(139,0,0,0.05);
+    transform: translate(2px,2px);
+    box-shadow:1px 1px 0px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    .btn-group {
+      flex-direction: column;
+      align-items: center;
+      margin: 15px 0 30px 0;
+    }
+    
+    .btn {
+      width: 100%;
+      max-width: 280px;
+      padding: 14px 20px;
+    }
+  }
+
+  /* Article Content */
+  .article-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+  }
+
+  .article-header {
+    border-bottom: 3px double var(--ink);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  .article-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--headline);
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+  }
+
+  .article-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: var(--byline);
+    font-style: italic;
+    flex-wrap: wrap;
+  }
+
+  .article-image {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 1px solid var(--ink);
+  }
+
+  .article-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .article-body p {
+    margin-bottom: 20px;
+  }
+
+  .article-body ul, .article-body ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  .article-body li {
+    margin-bottom: 10px;
+  }
+
+  .article-footer {
+    border-top: 1px solid var(--column-rule);
+    padding-top: 20px;
+    font-style: italic;
+    color: var(--byline);
+    font-size: 0.9rem;
+    margin-top: 40px;
+  }
+
+  .article-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--column-rule);
+  }
+
+  .nav-btn {
+    background-color: var(--newsprint);
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .nav-btn:hover {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  @media (max-width: 768px) {
+    .article-title {
+      font-size: 1.8rem;
+    }
+    
+    .article-body {
+      font-size: 1rem;
+    }
+    
+    .article-navigation {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .nav-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  footer {
+    margin-top: 80px;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--byline);
+    border-top: 2px solid var(--ink);
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      margin-top: 60px;
+      padding: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="newspaper-container">
+
+  <!-- Navbar -->
+  <header id="navbar">
+    <div class="logo" onclick="location.href='index.html'">The Emenent Times</div>
+    <button class="hamburger" onclick="openMobileMenu()">☰</button>
+    <nav id="menu">
+      <a href="index.html">home</a>
+      <a href="resources.html">resources</a>
+      <a href="blog.html" class="active">blog</a>
+      <a href="contactus.html">contact</a>
+    </nav>
+    
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu-container" id="mobile-menu-container" onclick="closeMobileMenu()"></div>
+    
+    <!-- Mobile menu -->
+    <div class="mobile-nav" id="mobile-nav">
+      <button class="close-menu" onclick="closeMobileMenu()">×</button>
+      <a href="index.html">home</a>
+      <a href="resources.html">resources</a>
+      <a href="blog.html" class="active">news</a>
+      <a href="contactus.html">contact</a>
+    </div>
+  </header>
+
+  <!-- Newspaper header -->
+  <div class="newspaper-header">
+    <div class="newspaper-volume">VOL. MMXXV No. 3</div>
+    <div class="newspaper-date" id="current-date">Monday, January 1, 2025</div>
+    <h1 class="newspaper-title">Emenent Times</h1>
+    <div class="newspaper-tagline">- basically keeping up with the emenents</div>
+  </div>
+
+  <!-- Buttons right after title -->
+  <div class="btn-group">
+    <button class="btn" onclick="location.href='index.html'">Return Home</button>
+    <button class="btn" onclick="location.href='blog.html'">Back to News</button>
+    <button class="btn" onclick="location.href='contactus.html'">Contact Us</button>
+  </div>
+
+  <div class="paper-edge"></div>
+
+  <!-- Article Content -->
+  <div class="article-content">
+    <div class="article-header">
+      <h2 class="article-title">University Breaks Ground on $50M Medical Research Center</h2>
+      <div class="article-meta">
+        <span>By University News Desk</span>
+        <span>March 18, 2025</span>
+        <span>5 min read</span>
+      </div>
+    </div>
+    
+    <img src="https://placehold.co/1000x500/d9cdb4/8b0000?text=New+Research+Center" alt="New Research Center" class="article-image">
+    
+    <div class="article-body">
+      <p>The university has officially begun construction on a state-of-the-art medical research facility that will bring together researchers from across disciplines to tackle pressing healthcare challenges. The center is expected to open in Fall 2026 and will feature advanced laboratories, collaborative spaces, and innovation hubs.</p>
+      
+      <p>University President Dr. James Wilson stated, "This research center represents our commitment to advancing medical knowledge and improving patient outcomes. By creating spaces that foster collaboration between different specialties, we believe we can accelerate the pace of medical discovery."</p>
+      
+      <p>The $50 million facility will include:</p>
+      <ul>
+        <li>20 specialized research laboratories</li>
+        <li>A bioinformatics and data analysis center</li>
+        <li>Collaborative workspaces for interdisciplinary teams</li>
+        <li>An innovation hub for translating research into clinical practice</li>
+        <li>Conference facilities for academic exchanges</li>
+      </ul>
+      
+      <p>The project is funded through a combination of university resources, private donations, and research grants. Construction is expected to create approximately 200 local jobs, with the completed center employing 50 researchers and support staff.</p>
+      
+      <p>Dr. Maria Rodriguez, who will direct the center's cardiovascular research program, commented, "This facility will allow us to approach medical challenges from multiple angles simultaneously. The integration of basic science, clinical research, and technological innovation under one roof is unprecedented in our region."</p>
+      
+      <p>The research center will focus initially on four key areas: precision medicine, neurodegenerative diseases, health equity, and emergency medical interventions. Each research wing will be equipped with technology specific to its focus area while sharing core facilities to encourage collaboration.</p>
+      
+      <p>Beyond the immediate research benefits, the center is expected to have significant economic impacts on the local community. It will attract top talent from around the world and create partnerships with healthcare industry leaders looking to develop new technologies and treatments.</p>
+      
+      <p>"We're not just building a research center," added Dr. Wilson. "We're building an ecosystem where innovation can thrive, where students can learn alongside leading researchers, and where discoveries can quickly move from the lab to the bedside."</p>
+      
+      <p>The architectural design emphasizes sustainability, with features such as solar panels, rainwater collection systems, and energy-efficient laboratory equipment. The building will also include numerous spaces designed to encourage spontaneous interactions among researchers from different disciplines.</p>
+      
+      <p>Construction is scheduled to be completed in 18 months, with the first research teams moving in by early 2027. The university is already seeking additional partnerships with industry leaders and research organizations to maximize the center's impact.</p>
+    </div>
+    
+    <div class="article-footer">
+      Published in The Emenent Times | March 18, 2025
+    </div>
+    
+    <div class="article-navigation">
+      <a href="blog.html" class="nav-btn">&larr; Back to All News</a>
+      <a href="#" class="nav-btn">Next Article &rarr;</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 The Emenent Times | Published by Emenents for Emenents | 
+    <a href="contactus.html" style="color: var(--accent); text-decoration: none;">Contact Us</a>
+  </footer>
+</div>
+
+<script>
+  const now = new Date();
+  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+  document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+
+  // Navbar shadow on scroll
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('navbar');
+    if(window.scrollY > 10) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+  });
+
+  // Mobile menu functions
+  function openMobileMenu() {
+    document.getElementById("mobile-nav").classList.add("active");
+    document.getElementById("mobile-menu-container").classList.add("active");
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    document.getElementById("mobile-nav").classList.remove("active");
+    document.getElementById("mobile-menu-container").classList.remove("active");
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close menu when clicking outside
+  document.getElementById('mobile-menu-container').addEventListener('click', closeMobileMenu);
+  
+  // Prevent closing when clicking on the menu itself
+  document.getElementById('mobile-nav').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+</script>
+</body>
+</html>

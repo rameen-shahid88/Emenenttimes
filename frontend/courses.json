@@ -1,0 +1,100 @@
+{
+  "courses": [
+    {
+      "title": "Calculus I - Differential Calculus",
+      "description": "Comprehensive introduction to limits, derivatives, and their applications. Includes lecture notes, problem sets, solution guides, and practice exams covering topics from basic limits to optimization problems.",
+      "keywords": "calculus differential mathematics math",
+      "link": "https://lms.nust.edu.pk/portal/"
+    },
+    {
+      "title": "Linear Algebra",
+      "description": "Complete course materials on vector spaces, matrices, eigenvalues, and linear transformations. Features step-by-step proofs, computational exercises, and real-world applications in engineering and computer science.",
+      "keywords": "linear algebra mathematics math matrices vectors",
+      "link": "#"
+    },
+    {
+      "title": "Statistics & Probability",
+      "description": "Statistical analysis fundamentals including descriptive statistics, probability distributions, hypothesis testing, and regression analysis. Contains datasets, R/Python code examples, and comprehensive study materials.",
+      "keywords": "statistics probability mathematics math data",
+      "link": "#"
+    },
+    {
+      "title": "Discrete Mathematics",
+      "description": "Essential mathematical foundations for computer science including logic, set theory, graph theory, and combinatorics. Perfect preparation for advanced algorithms and theoretical computer science courses.",
+      "keywords": "discrete mathematics math logic computer science",
+      "link": "#"
+    },
+    {
+      "title": "Organic Chemistry",
+      "description": "Comprehensive organic chemistry materials covering reaction mechanisms, synthesis strategies, and spectroscopic analysis. Includes reaction summaries, mechanism practice problems, and laboratory procedures.",
+      "keywords": "organic chemistry science lab reactions",
+      "link": "#"
+    },
+    {
+      "title": "General Physics I - Mechanics",
+      "description": "Classical mechanics from kinematics to rotational dynamics. Features problem-solving strategies, conceptual explanations, laboratory exercises, and mathematical derivations with worked examples.",
+      "keywords": "physics mechanics science kinematics dynamics",
+      "link": "#"
+    },
+    {
+      "title": "Molecular Biology",
+      "description": "Modern molecular biology techniques and concepts including DNA replication, gene expression, and protein synthesis. Contains research papers, laboratory protocols, and current biotechnology applications.",
+      "keywords": "molecular biology science dna genetics",
+      "link": "#"
+    },
+    {
+      "title": "Environmental Science",
+      "description": "Interdisciplinary approach to environmental issues including climate change, pollution control, and sustainable development. Features case studies, policy analyses, and field research methodologies.",
+      "keywords": "environmental science ecology climate sustainability",
+      "link": "#"
+    },
+    {
+      "title": "World Literature",
+      "description": "Comprehensive study of global literary traditions from ancient epics to contemporary works. Includes critical essays, historical context materials, discussion guides, and comparative analysis frameworks.",
+      "keywords": "literature english humanities writing poetry",
+      "link": "#"
+    },
+    {
+      "title": "Modern European History",
+      "description": "Detailed examination of European history from the Renaissance to present day. Contains primary source documents, timeline summaries, biographical profiles, and analytical essay examples.",
+      "keywords": "history european humanities renaissance modern",
+      "link": "#"
+    },
+    {
+      "title": "Philosophy of Mind",
+      "description": "Exploration of consciousness, personal identity, and the mind-body problem. Features philosophical texts, argument analysis templates, and contemporary debates in cognitive science and artificial intelligence.",
+      "keywords": "philosophy mind consciousness humanities cognitive",
+      "link": "#"
+    },
+    {
+      "title": "Cultural Anthropology",
+      "description": "Study of human societies and cultural practices across the globe. Includes ethnographic studies, fieldwork methodologies, theoretical frameworks, and cross-cultural comparison tools.",
+      "keywords": "anthropology cultural humanities society ethnography",
+      "link": "#"
+    },
+    {
+      "title": "Data Structures & Algorithms",
+      "description": "Fundamental computer science concepts including arrays, linked lists, trees, graphs, and algorithmic analysis. Contains code implementations in multiple languages, complexity analysis, and interview preparation materials.",
+      "keywords": "data structures algorithms computer science programming",
+      "link": "#"
+    },
+    {
+      "title": "Machine Learning Fundamentals",
+      "description": "Introduction to supervised and unsupervised learning algorithms including regression, classification, and clustering. Features Python/R implementations, datasets, and practical project examples.",
+      "keywords": "machine learning artificial intelligence computer science python",
+      "link": "#"
+    },
+    {
+      "title": "Web Development",
+      "description": "Complete full-stack web development course covering HTML, CSS, JavaScript, and modern frameworks. Includes project templates, deployment guides, and industry best practices for responsive design.",
+      "keywords": "web development programming html css javascript",
+      "link": "#"
+    },
+    {
+      "title": "Database Management Systems",
+      "description": "Comprehensive database design and management including SQL, normalization, and performance optimization. Contains database schemas, query examples, and real-world application case studies.",
+      "keywords": "database management systems sql programming",
+      "link": "#"
+    }
+  ]
+}
