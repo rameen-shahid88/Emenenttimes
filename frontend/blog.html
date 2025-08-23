@@ -767,7 +767,9 @@
       padding: 15px;
     }
   }
-   .news-popup {
+  
+  /* Popup Styles */
+  .news-popup {
     display: none;
     position: fixed;
     top: 0;
@@ -899,7 +901,7 @@
       <button class="close-menu" onclick="closeMobileMenu()">×</button>
       <a href="index.html">home</a>
       <a href="resources.html">resources</a>
-      <a href="blog.html" class="active">news</a>
+      <a href="blog.html" class="active">blog</a>
       <a href="contactus.html">contact</a>
     </div>
   </header>
@@ -922,16 +924,8 @@
   <div class="paper-edge"></div>
 
   <!-- Featured News -->
-  <div class="featured-news">
-    <img src="https://placehold.co/1000x500/d9cdb4/8b0000?text=New+Research+Center" alt="New Research Center" class="news-image">
-    <h2 class="news-title">University Breaks Ground on $50M Medical Research Center</h2>
-    <div class="news-meta">
-      <span>By University News Desk</span>
-      <span>March 18, 2025</span>
-      <span>3 min read</span>
-    </div>
-    <p class="news-excerpt">The university has officially begun construction on a state-of-the-art medical research facility that will bring together researchers from across disciplines to tackle pressing healthcare challenges. The center is expected to open in Fall 2026 and will feature advanced laboratories, collaborative spaces, and innovation hubs.</p>
-    <a href="#" class="read-more">Read Full Story</a>
+  <div class="featured-news" id="featured-news">
+    <!-- Content will be loaded from JSON -->
   </div>
 
   <div class="paper-edge"></div>
@@ -940,54 +934,8 @@
   <div class="news-container">
     <div class="news-main">
       <!-- News Grid -->
-      <div class="news-grid">
-        <div class="news-card">
-          <img src="https://placehold.co/600x400/d9cdb4/8b0000?text=Student+Achievements" alt="Student Achievements" class="card-image">
-          <h3 class="card-title">Medical Students Win National Research Competition</h3>
-          <div class="card-meta">By Campus Reporter • March 15, 2025</div>
-          <p class="card-excerpt">A team of fourth-year medical students has taken first place in the National Medical Research Competition for their innovative approach to emergency care protocols.</p>
-          <a href="blog-post.html" class="read-more">Read More</a>
-        </div>
-
-        <div class="news-card">
-          <img src="https://placehold.co/600x400/d9cdb4/8b0000?text=Campus+Event" alt="Campus Event" class="card-image">
-          <h3 class="card-title">Annual Medical Conference Returns April 10-12</h3>
-          <div class="card-meta">By Events Team • March 12, 2025</div>
-          <p class="card-excerpt">The university's renowned annual medical conference will feature keynote speakers from leading institutions and workshops on emerging healthcare technologies.</p>
-          <a href="blog-post.html" class="read-more">Read More</a>
-        </div>
-
-        <div class="news-card">
-          <img src="https://placehold.co/600x400/d9cdb4/8b0000?text=Faculty+News" alt="Faculty News" class="card-image">
-          <h3 class="card-title">Dr. Elena Rodriguez Appointed Department Chair</h3>
-          <div class="card-meta">By University Affairs • March 10, 2025</div>
-          <p class="card-excerpt">After fifteen years of distinguished service, Dr. Rodriguez becomes the first woman to chair the Department of Emergency Medicine at our institution.</p>
-           <a href="blog-post.html" class="read-more">Read More</a>
-        </div>
-
-        <div class="news-card">
-          <img src="https://placehold.co/600x400/d9cdb4/8b0000?text=Campus+Development" alt="Campus Development" class="card-image">
-          <h3 class="card-title">New Student Center to Open Next Semester</h3>
-          <div class="card-meta">By Campus Development • March 8, 2025</div>
-          <p class="card-excerpt">The newly renovated student center will feature expanded study spaces, a 24-hour café, and wellness rooms when it opens at the start of the fall semester.</p>
-             <a href="blog-post.html" class="read-more">Read More</a>
-        </div>
-
-        <div class="news-card">
-          <img src="https://placehold.co/600x400/d9cdb4/8b0000?text=Alumni+News" alt="Alumni News" class="card-image">
-          <h3 class="card-title">Alumni Donate $2M for Medical Simulation Lab</h3>
-          <div class="card-meta">By Development Office • March 5, 2025</div>
-          <p class="card-excerpt">A group of prominent alumni has made a significant donation to upgrade the university's medical simulation facilities with the latest technology.</p>
-                  <a href="blog-post.html" class="read-more">Read More</a>
-        </div>
-
-        <div class="news-card">
-          <img src="https://placehold.co/600x400/d9cdb4/8b0000?text=Community+Outreach" alt="Community Outreach" class="card-image">
-          <h3 class="card-title">University Hospital Launches Community Health Initiative</h3>
-          <div class="card-meta">By Community Relations • March 3, 2025</div>
-          <p class="card-excerpt">A new program will provide free health screenings and medical education to underserved communities in partnership with local organizations.</p>
-           <a href="blog-post.html" class="read-more">Read More</a>
-        </div>
+      <div class="news-grid" id="news-grid">
+        <!-- Content will be loaded from JSON -->
       </div>
 
       <!-- Pagination -->
@@ -1004,34 +952,19 @@
     <div class="sidebar">
       <!-- Upcoming Events Widget -->
       <div class="sidebar-widget">
-        <h3 class="widget-title">Upcoming Events</h3>
+        <h3 class="widget-title">Important Dates</h3>
         <ul class="events-list">
           <li>
-            <span class="event-date">MAR 25</span>
-            <a href="#">Medical Alumni Networking Reception</a>
-            <span class="event-location">University Club, 6:00 PM</span>
+            <span class="event-date">SEPT 01</span>
+            <a href="#">Start Of Orientation Week for DE-47</a>
+            <span class="event-location">NUST, College of Electrical and Mechanical Engineering</span>
           </li>
           <li>
-            <span class="event-date">APR 2</span>
-            <a href="#">Research Symposium: Innovations in Emergency Care</a>
-            <span class="event-location">Science Building Auditorium, 9:00 AM</span>
+            <span class="event-date">SEPT 08</span>
+            <a href="#">Commencement of Classes for Fall'2025</a>
+            <span class="event-location">NUST, College of Electrical and Mechanical Engineering</span>
           </li>
-          <li>
-            <span class="event-date">APR 10-12</span>
-            <a href="#">Annual Medical Conference</a>
-            <span class="event-location">University Convention Center</span>
-          </li>
-          <li>
-            <span class="event-date">APR 20</span>
-            <a href="#">Open House: Tour of New Facilities</a>
-            <span class="event-location">Main Campus, 1:00-4:00 PM</span>
-          </li>
-          <li>
-            <span class="event-date">MAY 5</span>
-            <a href="#">Scholarship Application Deadline</a>
-            <span class="event-location">Online Submission</span>
-          </li>
-        </ul>
+          
       </div>
 
       <!-- Announcements Widget -->
@@ -1039,29 +972,11 @@
         <h3 class="widget-title">Announcements</h3>
         <ul class="announcements-list">
           <li>
-            <a href="#">Summer semester registration now open</a>
-            <div class="announcement-date">Posted March 17, 2025</div>
+            <a href="#">The Emenent Times is online now</a>
+            <div class="announcement-date">Posted August 23, 2025</div>
           </li>
-          <li>
-            <a href="#">Campus parking lot P3 closed for repairs until Friday</a>
-            <div class="announcement-date">Posted March 15, 2025</div>
-          </li>
-          <li>
-            <a href="#">New library hours effective April 1st</a>
-            <div class="announcement-date">Posted March 12, 2025</div>
-          </li>
-          <li>
-            <a href="#">Call for submissions: University research journal</a>
-            <div class="announcement-date">Posted March 10, 2025</div>
-          </li>
-          <li>
-            <a href="#">IT maintenance scheduled for Sunday morning</a>
-            <div class="announcement-date">Posted March 8, 2025</div>
-          </li>
+         
         </ul>
-      </div>
-
-     
       </div>
     </div>
   </div>
@@ -1072,96 +987,239 @@
   </footer>
 </div>
 
+<!-- Popup for full articles -->
+<div class="news-popup" id="news-popup">
+  <div class="popup-content" id="popup-content">
+    <button class="close-popup" onclick="closePopup()">×</button>
+    <div class="popup-header">
+      <h2 class="popup-title" id="popup-title"></h2>
+      <div class="popup-meta" id="popup-meta"></div>
+    </div>
+    <img src="" alt="" class="popup-image" id="popup-image">
+    <div class="popup-body" id="popup-body"></div>
+    <div class="popup-footer">
+      <p>Published in The Emenent Times</p>
+    </div>
+  </div>
+</div>
+
 <script>
-  const now = new Date();
-  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-  document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
+// Set current date
+const now = new Date();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
 
-  // Navbar shadow on scroll
-  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if(window.scrollY > 10) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-  });
+// Navbar shadow on scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 10) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+});
 
-  // Mobile menu functions
-  function openMobileMenu() {
-    document.getElementById("mobile-nav").classList.add("active");
-    document.getElementById("mobile-menu-container").classList.add("active");
-    document.body.style.overflow = 'hidden';
-  }
+// Mobile menu functions
+function openMobileMenu() {
+  document.getElementById("mobile-nav").classList.add("active");
+  document.getElementById("mobile-menu-container").classList.add("active");
+  document.body.style.overflow = 'hidden';
+}
 
-  function closeMobileMenu() {
-    document.getElementById("mobile-nav").classList.remove("active");
-    document.getElementById("mobile-menu-container").classList.remove("active");
-    document.body.style.overflow = 'auto';
-  }
+function closeMobileMenu() {
+  document.getElementById("mobile-nav").classList.remove("active");
+  document.getElementById("mobile-menu-container").classList.remove("active");
+  document.body.style.overflow = 'auto';
+}
 
-  // Close menu when clicking outside
-  document.getElementById('mobile-menu-container').addEventListener('click', closeMobileMenu);
+// Close menu when clicking outside
+document.getElementById('mobile-menu-container').addEventListener('click', closeMobileMenu);
+
+// Prevent closing when clicking on the menu itself
+document.getElementById('mobile-nav').addEventListener('click', function(e) {
+  e.stopPropagation();
+});
+
+// Store all articles globally
+let allArticlesData = [];
+
+// Pagination functionality
+let currentPage = 1;
+const articlesPerPage = 6; // Number of articles to show per page
+
+// Load articles from JSON with pagination
+function loadArticles(page = 1) {
+  fetch('articles.json')
+    .then(response => response.json())
+    .then(data => {
+      // Store all articles globally for popup access
+      allArticlesData = data.articles;
+      
+      // Load featured article
+      const featuredArticle = data.articles.find(article => article.featured);
+      if (featuredArticle) {
+        document.getElementById('featured-news').innerHTML = `
+          <img src="${featuredArticle.image}" alt="${featuredArticle.title}" class="news-image">
+          <h2 class="news-title">${featuredArticle.title}</h2>
+          <div class="news-meta">${featuredArticle.meta}</div>
+          <p class="news-excerpt">${featuredArticle.excerpt}</p>
+          <a href="#" class="read-more" onclick="openPopup('${featuredArticle.id}'); return false;">Read Full Story</a>
+        `;
+      }
+
+      // Get non-featured articles for pagination
+      const nonFeaturedArticles = data.articles.filter(article => !article.featured);
+      
+      // Calculate pagination values
+      const totalPages = Math.ceil(nonFeaturedArticles.length / articlesPerPage);
+      const startIndex = (page - 1) * articlesPerPage;
+      const endIndex = Math.min(startIndex + articlesPerPage, nonFeaturedArticles.length);
+      const pageArticles = nonFeaturedArticles.slice(startIndex, endIndex);
+      
+      // Update current page
+      currentPage = page;
+      
+      // Load articles for current page
+      const newsGrid = document.getElementById('news-grid');
+      newsGrid.innerHTML = '';
+      
+      pageArticles.forEach(article => {
+        const articleCard = document.createElement('div');
+        articleCard.className = 'news-card';
+        articleCard.innerHTML = `
+          <img src="${article.image}" alt="${article.title}" class="card-image">
+          <h3 class="card-title">${article.title}</h3>
+          <div class="card-meta">${article.meta}</div>
+          <p class="card-excerpt">${article.excerpt}</p>
+          <a href="#" class="read-more" onclick="openPopup('${article.id}'); return false;">Read More</a>
+        `;
+        newsGrid.appendChild(articleCard);
+      });
+      
+      // Update pagination controls
+      updatePaginationControls(currentPage, totalPages);
+    })
+    .catch(error => {
+      console.error('Error loading articles:', error);
+      // Fallback content if JSON fails to load
+      document.getElementById('featured-news').innerHTML = `
+        <p>Error loading articles. Please check if articles.json exists.</p>
+      `;
+      document.getElementById('news-grid').innerHTML = `
+        <p>Articles could not be loaded at this time.</p>
+      `;
+    });
+}
+
+// Update pagination controls
+function updatePaginationControls(currentPage, totalPages) {
+  const paginationContainer = document.querySelector('.pagination');
+  paginationContainer.innerHTML = '';
   
-  // Prevent closing when clicking on the menu itself
-  document.getElementById('mobile-nav').addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
-
-  // Simple newsletter form validation
-  document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+  // Previous button
+  const prevButton = document.createElement('a');
+  prevButton.href = '#';
+  prevButton.className = 'page-link';
+  prevButton.innerHTML = '&laquo;';
+  prevButton.addEventListener('click', (e) => {
     e.preventDefault();
-    const email = this.querySelector('input[type="email"]').value;
-    if (email) {
-      alert('Thank you for subscribing to campus updates!');
-      this.reset();
+    if (currentPage > 1) {
+      loadArticles(currentPage - 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   });
-  // Article data - in a real implementation, this would come from a database or CMS
-  const articles = {
-    "research-center": {
-      title: "University Breaks Ground on $50M Medical Research Center",
-      meta: '<span>By University News Desk</span><span>March 18, 2025</span><span>5 min read</span>',
-      image: "https://placehold.co/1000x500/d9cdb4/8b0000?text=New+Research+Center",
-      date: "March 18, 2025",
-      body: `<p>The university has officially begun construction on a state-of-the-art medical research facility that will bring together researchers from across disciplines to tackle pressing healthcare challenges. The center is expected to open in Fall 2026 and will feature advanced laboratories, collaborative spaces, and innovation hubs.</p>
-      
-      <p>University President Dr. James Wilson stated, "This research center represents our commitment to advancing medical knowledge and improving patient outcomes. By creating spaces that foster collaboration between different specialties, we believe we can accelerate the pace of medical discovery."</p>
-      
-      <p>The $50 million facility will include:</p>
-      <ul>
-        <li>20 specialized research laboratories</li>
-        <li>A bioinformatics and data analysis center</li>
-        <li>Collaborative workspaces for interdisciplinary teams</li>
-        <li>An innovation hub for translating research into clinical practice</li>
-        <li>Conference facilities for academic exchanges</li>
-      </ul>
-      
-      <p>The project is funded through a combination of university resources, private donations, and research grants. Construction is expected to create approximately 200 local jobs, with the completed center employing 50 researchers and support staff.</p>
-      
-      <p>Dr. Maria Rodriguez, who will direct the center's cardiovascular research program, commented, "This facility will allow us to approach medical challenges from multiple angles simultaneously. The integration of basic science, clinical research, and technological innovation under one roof is unprecedented in our region."</p>
-      
-      <p>The research center will focus initially on four key areas: precision medicine, neurodegenerative diseases, health equity, and emergency medical interventions. Each research wing will be equipped with technology specific to its focus area while sharing core facilities to encourage collaboration.</p>`
-    },
-    "student-achievements": {
-      title: "Medical Students Win National Research Competition",
-      meta: '<span>By Campus Reporter</span><span>March 15, 2025</span><span>4 min read</span>',
-      image: "https://placehold.co/1000x500/d9cdb4/8b0000?text=Student+Achievements",
-      date: "March 15, 2025",
-      body: `<p>A team of fourth-year medical students has taken first place in the National Medical Research Competition for their innovative approach to emergency care protocols. The team, consisting of Sarah Jenkins, Michael Chen, and David Rodriguez, developed a new triage system that reduces decision time in emergency departments by 40%.</p>
-      
-      <p>"We observed that emergency physicians often face information overload during critical moments," explained Sarah Jenkins, team captain. "Our system uses machine learning to prioritize patient data, highlighting the most relevant information based on presenting symptoms."</p>
-      
-      <p>The competition, which included entries from 35 medical schools across the country, was judged by a panel of emergency medicine specialists and healthcare technology experts. The winning project stood out for its practical application and rigorous testing methodology.</p>
-      
-      <p>Dr. Emily Watson, faculty advisor to the team, praised their achievement: "These students have demonstrated exceptional innovation and dedication. Their work has the potential to make a real difference in emergency departments nationwide, where seconds can literally mean the difference between life and death."</p>
-      
-      <p>The team will present their research at the National Emergency Medicine Conference in June and has already received interest from several healthcare technology companies interested in developing their system for clinical use.</p>
-      
-      <p>When asked about their success, Michael Chen attributed it to the university's emphasis on interdisciplinary collaboration: "Our program encourages us to work across specialties. David's background in data science combined with Sarah's clinical experience and my work in human factors engineering created the perfect combination for this project."</p>`
-    },
-    // Add similar objects for all other articles
-  };
-
+  if (currentPage === 1) {
+    prevButton.style.opacity = '0.5';
+    prevButton.style.pointerEvents = 'none';
+  }
+  paginationContainer.appendChild(prevButton);
   
+  // Page number buttons
+  const maxVisiblePages = 5; // Maximum number of page buttons to show
+  let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+  let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+  
+  // Adjust if we're at the end
+  if (endPage - startPage + 1 < maxVisiblePages) {
+    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+  }
+  
+  for (let i = startPage; i <= endPage; i++) {
+    const pageLink = document.createElement('a');
+    pageLink.href = '#';
+    pageLink.className = 'page-link';
+    if (i === currentPage) {
+      pageLink.classList.add('active');
+    }
+    pageLink.textContent = i;
+    pageLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      loadArticles(i);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    paginationContainer.appendChild(pageLink);
+  }
+  
+  // Next button
+  const nextButton = document.createElement('a');
+  nextButton.href = '#';
+  nextButton.className = 'page-link';
+  nextButton.innerHTML = '&raquo;';
+  nextButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (currentPage < totalPages) {
+      loadArticles(currentPage + 1);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+  if (currentPage === totalPages) {
+    nextButton.style.opacity = '0.5';
+    nextButton.style.pointerEvents = 'none';
+  }
+  paginationContainer.appendChild(nextButton);
+}
 
+// Handle ESC key press
+function handleEscKey(event) {
+  if (event.key === 'Escape' || event.keyCode === 27) {
+    closePopup();
+  }
+}
+
+// Popup functions
+function openPopup(articleId) {
+  // Find the article in our globally stored data
+  const article = allArticlesData.find(a => a.id === articleId);
+  if (article) {
+    document.getElementById('popup-title').textContent = article.title;
+    document.getElementById('popup-meta').innerHTML = article.meta;
+    document.getElementById('popup-image').src = article.image;
+    document.getElementById('popup-image').alt = article.title;
+    document.getElementById('popup-body').innerHTML = article.body;
+    document.getElementById('news-popup').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    
+    // Add event listener for ESC key when popup is open
+    document.addEventListener('keydown', handleEscKey);
+  }
+}
+
+function closePopup() {
+  document.getElementById('news-popup').style.display = 'none';
+  document.body.style.overflow = 'auto';
+  
+  // Remove the ESC key event listener when popup is closed
+  document.removeEventListener('keydown', handleEscKey);
+}
+
+// Close popup when clicking outside the content
+document.getElementById('news-popup').addEventListener('click', function(event) {
+  if (event.target === this) {
+    closePopup();
+  }
+});
+
+// Load articles when page is ready
+document.addEventListener('DOMContentLoaded', () => {
+  loadArticles(1); // Load first page initially
+});
 </script>
 </body>
 </html>

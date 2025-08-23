@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "id": "abc",
+      "featured": true,
+      "title": "abc",
+      "meta": "<span>By University News Desk</span><span>March 18, 2025</span><span>5 min read</span>",
+      "image": "https://placehold.co/1000x500/d9cdb4/8b0000?text=New+Research+Center",
+      "excerpt": "The university has officially begun construction on a state-of-the-art medical research facility that will bring together researchers from across disciplines to tackle pressing healthcare challenges. The center is expected to open in Fall 2026 and will feature advanced laboratories, collaborative spaces, and innovation hubs.",
+      "date": "March 18, 2025",
+      "body": "<p>abc</p>"
+    },
+    {
+      "id": "student-achievements",
+      "featured": false,
+      "title": "Medical Students Win National Research Competition",
+      "meta": "<span>By Campus Reporter</span><span>March 15, 2025</span><span>4 min read</span>",
+      "image": "https://placehold.co/600x400/d9cdb4/8b0000?text=Student+Achievements",
+      "excerpt": "A team of fourth-year medical students has taken first place in the National Medical Research Competition for their innovative approach to emergency care protocols.",
+      "date": "March 15, 2025",
+      "body": "<p>A team of fourth-year medical students has taken first place in the National Medical Research Competition for their innovative approach to emergency care protocols. The team, consisting of Sarah Jenkins, Michael Chen, and David Rodriguez, developed a new triage system that reduces decision time in emergency departments by 40%.</p><p>\"We observed that emergency physicians often face information overload during critical moments,\" explained Sarah Jenkins, team captain. \"Our system uses machine learning to prioritize patient data, highlighting the most relevant information based on presenting symptoms.\"</p><p>The competition, which included entries from 35 medical schools across the country, was judged by a panel of emergency medicine specialists and healthcare technology experts. The winning project stood out for its practical application and rigorous testing methodology.</p><p>Dr. Emily Watson, faculty advisor to the team, praised their achievement: \"These students have demonstrated exceptional innovation and dedication. Their work has the potential to make a real difference in emergency departments nationwide, where seconds can literally mean the difference between life and death.\"</p><p>The team will present their research at the National Emergency Medicine Conference in June and has already received interest from several healthcare technology companies interested in developing their system for clinical use.</p><p>When asked about their success, Michael Chen attributed it to the university's emphasis on interdisciplinary collaboration: \"Our program encourages us to work across specialties. David's background in data science combined with Sarah's clinical experience and my work in human factors engineering created the perfect combination for this project.\"</p>"
+    },
+    {
+      "id": "medical-conference",
+      "featured": false,
+      "title": "Annual Medical Conference Returns April 10-12",
+      "meta": "<span>By Events Team</span><span>March 12, 2025</span><span>3 min read</span>",
+      "image": "https://placehold.co/600x400/d9cdb4/8b0000?text=Campus+Event",
+      "excerpt": "The university's renowned annual medical conference will feature keynote speakers from leading institutions and workshops on emerging healthcare technologies.",
+      "date": "March 12, 2025",
+      "body": "<p>The university's renowned annual medical conference will return on April 10-12, featuring keynote speakers from leading institutions and workshops on emerging healthcare technologies. This year's theme is \"Innovations in Patient-Centered Care,\" with a focus on technological advancements that improve both clinical outcomes and patient experience.</p><p>Dr. Robert Thompson, conference chair, announced: \"We're particularly excited about this year's program as we'll be showcasing several groundbreaking technologies developed right here at our university. Attendees will have the opportunity to participate in hands-on workshops and see these innovations in action.\"</p><p>The conference will feature three tracks:</p><ul><li>Clinical Innovations: New approaches to diagnosis and treatment</li><li>Technology in Healthcare: Digital health, telemedicine, and AI applications</li><li>Healthcare Systems: Improving efficiency and patient flow in clinical settings</li></ul><p>Notable keynote speakers include:</p><ul><li>Dr. Amanda Chen, Director of the National Institute of Health Innovation</li><li>Prof. James Wilson, pioneer in telemedicine applications</li><li>Dr. Sarah Johnson, renowned for her work in emergency medicine protocols</li></ul><p>Early registration is recommended as attendance is limited to 500 participants to ensure optimal interaction and learning opportunities. Students and residents receive a 50% discount on registration fees.</p>"
+    }
+  ]
+}
