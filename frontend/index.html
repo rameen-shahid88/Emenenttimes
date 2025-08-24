@@ -377,6 +377,250 @@
     }
   }
 
+  /* Anonymous Rant Section Styles */
+  .rant-section {
+    margin: 50px 0;
+    border: 2px solid var(--ink);
+    padding: 30px;
+    background-color: rgba(139,0,0,0.02);
+    position: relative;
+  }
+
+  .rant-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--column-rule);
+  }
+
+  .rant-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+
+  .rant-subtitle {
+    font-style: italic;
+    color: var(--byline);
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+
+  .rant-form-container {
+    background-color: var(--newsprint);
+    border: 1px solid var(--column-rule);
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--headline);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+  }
+
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--column-rule);
+    background-color: var(--newsprint);
+    color: var(--ink);
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.3s ease;
+  }
+.form-group input[type="email"],
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--column-rule);
+    background-color: var(--newsprint);
+    color: var(--ink);
+    font-family: 'Merriweather', serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: border-color 0.3s ease;
+  }
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px rgba(139,0,0,0.2);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    max-height: 300px;
+  }
+
+  .form-group select {
+    cursor: pointer;
+  }
+
+  .submit-btn {
+    background-color: var(--accent);
+    color: var(--newsprint);
+    border: 2px solid var(--accent);
+    padding: 14px 30px;
+    font-family: 'Georgia', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .submit-btn:hover {
+    background-color: #a00000;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+  }
+
+  .submit-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+  }
+
+  /* Rants Display Area */
+  .rants-display {
+    border-top: 2px solid var(--ink);
+    padding-top: 30px;
+  }
+
+  .rants-header {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .rants-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--headline);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .rant-item {
+    background-color: var(--newsprint);
+    border-left: 4px solid var(--accent);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+  }
+
+  .rant-category {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--newsprint);
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+  }
+
+  .rant-content {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink);
+    margin-bottom: 12px;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .rant-timestamp {
+    font-style: italic;
+    color: var(--byline);
+    font-size: 0.9rem;
+    text-align: right;
+  }
+
+  .no-rants {
+    text-align: center;
+    color: var(--byline);
+    font-style: italic;
+    padding: 40px 20px;
+    border: 2px dashed var(--column-rule);
+    background-color: rgba(0,0,0,0.02);
+  }
+
+  /* Form status messages */
+  .form-status {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .form-status.success {
+    background-color: rgba(0, 128, 0, 0.1);
+    color: darkgreen;
+    border: 1px solid darkgreen;
+  }
+  
+  .form-status.error {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: darkred;
+    border: 1px solid darkred;
+  }
+
+  @media (max-width: 768px) {
+    .rant-section {
+      margin: 30px 0;
+      padding: 20px;
+    }
+    
+    .rant-title {
+      font-size: 1.8rem;
+    }
+    
+    .rant-form-container {
+      padding: 20px;
+    }
+    
+    .form-group textarea {
+      min-height: 100px;
+    }
+    
+    .submit-btn {
+      padding: 16px 20px;
+    }
+    
+    .rants-display {
+      padding-top: 25px;
+    }
+    
+    .rant-item {
+      padding: 15px;
+    }
+  }
+
   footer {
     margin-top: 60px;
     padding: 20px;
@@ -452,6 +696,85 @@
   </div>
 
   <div class="paper-edge"></div>
+  
+  <!-- Anonymous Rant Section -->
+  <div class="rant-section">
+    <div class="rant-header">
+      <h2 class="rant-title">Anonymous Engineering Confessions</h2>
+      <p class="rant-subtitle">Share your struggles, rants, and success stories - completely anonymously</p>
+    </div>
+    
+    <div class="rant-form-container">
+      <!-- Status message container -->
+      <div id="formStatus"></div>
+      
+      <form id="rantForm">
+        <div class="form-group">
+          <label for="rantContent">Let it all out (anonymously, of course):</label>
+          <textarea 
+            id="rantContent" 
+            name="rantContent" 
+            placeholder="Type your rant, confession, success story, or message here... Remember, this is completely anonymous. Share your engineering trauma, celebrate your victories, or just let out that frustration. We've all been there!"
+            required
+            maxlength="1000"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email (optional - only if you want a reply):</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="your.email@example.com (leave blank to stay completely anonymous)"
+            maxlength="100">
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Message</button>
+      </form>
+    </div>
+
+    <!-- Rants Display Area -->
+    <div class="rants-display">
+      <div class="rants-header">
+        <h3>Recent Confessions</h3>
+      </div>
+      
+      <div id="rantsContainer">
+        <!-- Sample rants for mockup -->
+        <div class="rant-item">
+          <div class="rant-category">Academic Breakdown</div>
+          <div class="rant-content">Just spent 6 hours debugging my code only to realize I had a semicolon in the wrong place. I'm questioning all my life choices right now. Why did I think engineering was a good idea? My calculator is more intelligent than me at this point.</div>
+          <div class="rant-timestamp">Posted 2 hours ago</div>
+        </div>
+        
+        <div class="rant-item">
+          <div class="rant-category">Lab Disaster</div>
+          <div class="rant-content">Accidentally short-circuited the entire lab bench today. The TA just stared at me in disbelief while smoke was still coming out of my breadboard. I think I'm banned from electronics lab for the rest of the semester. Send help (and a new multimeter).</div>
+          <div class="rant-timestamp">Posted 5 hours ago</div>
+        </div>
+        
+        <div class="rant-item">
+          <div class="rant-category">Success Story</div>
+          <div class="rant-content">GUYS! My final year project actually worked on the first try during the demo! I'm still in shock. After months of sleepless nights and crying over simulation software, it finally happened. There is hope for all of us!</div>
+          <div class="rant-timestamp">Posted 1 day ago</div>
+        </div>
+        
+        <div class="rant-item">
+          <div class="rant-category">Professor Rant</div>
+          <div class="rant-content">Prof said "this assignment should take 2 hours max" and here I am, 15 hours later, still trying to understand what the question is asking. I'm convinced professors live in a parallel universe where time moves differently.</div>
+          <div class="rant-timestamp">Posted 2 days ago</div>
+        </div>
+        
+        <div class="rant-item">
+          <div class="rant-category">Message to Dev</div>
+          <div class="rant-content">Thank you for creating this space! Finally somewhere we can be honest about the chaos that is engineering education. Please add a "existential crisis" category next time!</div>
+          <div class="rant-timestamp">Posted 3 days ago</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="paper-edge"></div>
 
   <!-- Footer -->
   <footer>
@@ -493,7 +816,144 @@
   document.getElementById('mobile-nav').addEventListener('click', function(e) {
     e.stopPropagation();
   });
-</script>
 
+  // Google Form submission
+  document.getElementById('rantForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const rantContent = document.getElementById('rantContent').value;
+    const email = document.getElementById('email').value;
+    
+    // Show loading state
+    const submitBtn = document.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+    
+    // Google Form URL (replace with your actual Google Form URL)
+    const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdgmCkgvkGo4SHGnKUTnWACW7tHtytVATVw1z13L0_KbVaLDw/formResponse';
+    
+    // Form field IDs (replace with your actual Google Form field IDs)
+    const rantFieldID = 'entry.262851430'; // Replace with your field ID for rant content
+    const emailFieldID = 'entry.262851430'; // Replace with your field ID for email
+    
+    // Create form data for submission
+    const formData = new FormData();
+    formData.append(rantFieldID, rantContent);
+    formData.append(emailFieldID, email);
+    
+    // Submit to Google Form
+    fetch(googleFormURL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: formData
+    })
+    .then(() => {
+      // Show success message
+      showFormStatus('Your message has been submitted anonymously!', 'success');
+      
+      // Reset form
+      document.getElementById('rantForm').reset();
+    })
+    .catch(error => {
+      // Show error message
+      showFormStatus('Sorry, there was an error submitting your message. Please try again.', 'error');
+      console.error('Error:', error);
+    })
+    .finally(() => {
+      // Reset button state
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    });
+  });
+  
+  // Function to show form status messages
+  function showFormStatus(message, type) {
+    const statusDiv = document.getElementById('formStatus');
+    statusDiv.textContent = message;
+    statusDiv.className = `form-status ${type}`;
+    
+    // Auto-hide after 5 seconds
+    setTimeout(() => {
+      statusDiv.textContent = '';
+      statusDiv.className = '';
+    }, 5000);
+  }
+   
+  // Load confessions from JSON file
+  function loadConfessions() {
+    fetch('confessions.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to load confessions');
+        }
+        return response.json();
+      })
+      .then(data => {
+        displayConfessions(data.confessions);
+      })
+      .catch(error => {
+        console.error('Error loading confessions:', error);
+        document.getElementById('rantsContainer').innerHTML = 
+          '<div class="no-rants">No confessions available at the moment. Check back later!</div>';
+      });
+  }
+
+  // Display confessions in the UI
+  function displayConfessions(confessions) {
+    const rantsContainer = document.getElementById('rantsContainer');
+    
+    if (!confessions || confessions.length === 0) {
+      rantsContainer.innerHTML = 
+        '<div class="no-rants">No confessions have been approved yet. Be the first to share!</div>';
+      return;
+    }
+    
+    // Sort confessions by timestamp (newest first)
+    confessions.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    
+    let html = '';
+    confessions.forEach(confession => {
+      html += `
+        <div class="rant-item">
+          <div class="rant-content">${confession.content}</div>
+          <div class="rant-timestamp">Posted ${formatDate(confession.timestamp)}</div>
+        </div>
+      `;
+    });
+    
+    rantsContainer.innerHTML = html;
+  }
+
+  // Format date for display
+  function formatDate(timestamp) {
+    const now = new Date();
+    const date = new Date(timestamp);
+    const diffInSeconds = Math.floor((now - date) / 1000);
+    
+    if (diffInSeconds < 60) {
+      return 'just now';
+    } else if (diffInSeconds < 3600) {
+      const minutes = Math.floor(diffInSeconds / 60);
+      return `${minutes} minute${minutes !== 1 ? 's' : ''} ago`;
+    } else if (diffInSeconds < 86400) {
+      const hours = Math.floor(diffInSeconds / 3600);
+      return `${hours} hour${hours !== 1 ? 's' : ''} ago`;
+    } else if (diffInSeconds < 2592000) {
+      const days = Math.floor(diffInSeconds / 86400);
+      return `${days} day${days !== 1 ? 's' : ''} ago`;
+    } else {
+      return date.toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      });
+    }
+  }
+
+  // Load confessions when page loads
+  document.addEventListener('DOMContentLoaded', loadConfessions);
+</script>
 </body>
 </html>
