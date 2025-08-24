@@ -229,12 +229,6 @@
       "link": "https://drive.google.com/drive/folders/1IKGPzO0Dvq83RtqtDCdLa8CeItm2XUXL?usp=drive_link"
     },
      {
-      "title": "Islamic Studies",
-      "description": "This course provides an overview of the fundamental teachings of Islam, including beliefs, worship, and moral values. Emphasis is placed on the application of Islamic principles to personal development, society, and contemporary issues.",
-      "keywords": "islamic humanities islamiat",
-      "link": "https://drive.google.com/drive/folders/1IKGPzO0Dvq83RtqtDCdLa8CeItm2XUXL?usp=drive_link"
-    },
-     {
       "title": "Engineering Economics",
       "description": "This course introduces economic principles and analytical techniques for evaluating engineering projects, including cost analysis, cash flow, and investment appraisal. Emphasis is placed on decision-making to ensure cost-effective and sustainable engineering solutions.",
       "keywords": "engineering economics",
@@ -271,7 +265,7 @@
       "link": "https://drive.google.com/drive/folders/1fURzd0Mn-jaxB8vmGETARi0_1Naaq4g5?usp=drive_link"
     },
     {
-      "title": "Materials and Manufacturinf Processes",
+      "title": "Materials and Manufacturing Processes",
       "description": "This course covers the properties, selection, and behavior of engineering materials along with fundamental manufacturing processes. Emphasis is placed on machining, casting, forming, joining, and modern manufacturing techniques used in engineering applications.",
       "keywords": "materials manufacturing mechanical",
       "link": "https://drive.google.com/drive/folders/1IpCU475X-ayIyLS7xNXWXkk5LtRbu6rN?usp=drive_link"
@@ -353,6 +347,12 @@
       "description": "This course covers the architecture, programming, and interfacing of microcontrollers in embedded systems. Emphasis is placed on real-time applications, system design, and integration of hardware and software for automation and control.",
       "keywords": "micontroller embedded system",
       "link": "https://drive.google.com/drive/folders/17JSDoBhnyuPmK6b56gm-F_dpkL1FsRsb?usp=drive_link"
+    },
+     {
+      "title": "Design of Machine Elements",
+      "description": "This course focuses on the principles and methodologies for designing mechanical components such as shafts, gears, bearings, springs, and fasteners. Emphasis is placed on ensuring strength, durability, and functionality for safe and efficient machine operation.",
+      "keywords": "elements machines",
+      "link": "https://drive.google.com/drive/folders/10d9HMTp1BaucMbBKwP1FdX4QcbDa6rhd?usp=drive_link"
     }
   ]
 }
