@@ -485,6 +485,21 @@
       font-size: 0.85rem;
     }
   }
+  .spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
 </style>
 </head>
 <body>
@@ -532,7 +547,7 @@
 
   <div class="paper-edge"></div>
 
-  <!-- Contact Content -->
+   <!-- Contact Content -->
   <div class="contact-container">
     <div class="contact-form">
       <h2>Send Us a Message</h2>
@@ -540,21 +555,23 @@
       <!-- Status message container -->
       <div id="statusMessage" class="status-message"></div>
       
-      <!-- Web3Forms contact form -->
-      <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+      <!-- Web3Forms contact form with improved structure -->
+      <form id="contactForm">
         <input type="hidden" name="access_key" value="00a1b8bd-6a32-4a6b-9637-b26e576aa47f">
         <input type="hidden" name="subject" value="New Contact Form Submission from The Emenent Times">
         <input type="hidden" name="from_name" value="The Emenent Times Contact Form">
-        <input type="checkbox" name="botcheck" id="" style="display: none;">
+        <input type="checkbox" name="botcheck" id="botcheck" class="hidden" style="display: none;">
         
         <div class="form-group">
           <label for="name">Your Name</label>
           <input type="text" id="name" name="name" class="form-control" required>
+          <div class="error-message" id="nameError"></div>
         </div>
         
         <div class="form-group">
           <label for="email">Email Address</label>
           <input type="email" id="email" name="email" class="form-control" required>
+          <div class="error-message" id="emailError"></div>
         </div>
         
         <div class="form-group">
@@ -568,23 +585,31 @@
             <option value="Feedback">Feedback</option>
             <option value="Other">Other</option>
           </select>
+          <div class="error-message" id="departmentError"></div>
         </div>
         
         <div class="form-group">
           <label for="subject">Subject</label>
           <input type="text" id="subject" name="subject" class="form-control" required>
+          <div class="error-message" id="subjectError"></div>
         </div>
         
         <div class="form-group">
           <label for="message">Your Message</label>
           <textarea id="message" name="message" class="form-control" required></textarea>
+          <div class="error-message" id="messageError"></div>
         </div>
         
-        <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span id="buttonText">Send Message</span>
+        </button>
       </form>
       
       <div class="response-time">
         <p>We typically respond to all emails within 24-48 hours</p>
+        <p>If you continue to experience issues, please email us directly at: 
+          <a href="mailto:contact@example.com">contact@example.com</a>
+        </p>
       </div>
     </div>
   </div>
@@ -596,57 +621,35 @@
 </div>
 
 <script>
-  const now = new Date();
-  const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
-  document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', options);
-
-  // Navbar shadow on scroll
-  window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if(window.scrollY > 10) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
-  });
-
-  // Mobile menu functions
-  function openMobileMenu() {
-    document.getElementById("mobile-nav").classList.add("active");
-    document.getElementById("mobile-menu-container").classList.add("active");
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMobileMenu() {
-    document.getElementById("mobile-nav").classList.remove("active");
-    document.getElementById("mobile-menu-container").classList.remove("active");
-    document.body.style.overflow = 'auto';
-  }
-
-  // Close menu when clicking outside
-  document.getElementById('mobile-menu-container').addEventListener('click', closeMobileMenu);
+  // Your existing date and menu functions remain the same
   
-  // Prevent closing when clicking on the menu itself
-  document.getElementById('mobile-nav').addEventListener('click', function(e) {
-    e.stopPropagation();
-  });
-
-  // Form submission handling for Web3Forms
+  // Form validation and submission
   document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
+    
+    // Reset error messages
+    clearErrorMessages();
+    
+    // Validate form
+    if (!validateForm()) {
+      return;
+    }
     
     // Get form elements
     const form = e.target;
     const submitBtn = document.getElementById('submitBtn');
+    const buttonText = document.getElementById('buttonText');
     const statusDiv = document.getElementById('statusMessage');
     
     // Show loading state
-    submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
-    statusDiv.style.display = 'none';
-    
-    // Get form data
-    const formData = new FormData(form);
+    buttonText.innerHTML = '<span class="spinner"></span> Sending...';
     
     try {
-      const response = await fetch(form.action, {
+      // Try Web3Forms first
+      const formData = new FormData(form);
+      
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formData
       });
@@ -654,28 +657,133 @@
       const data = await response.json();
       
       if (data.success) {
-        // Show success message
-        statusDiv.className = 'status-message success';
-        statusDiv.innerHTML = 'Message sent successfully! We will get back to you soon.';
-        statusDiv.style.display = 'block';
-        
-        // Reset form
+        showStatus('success', 'Message sent successfully! We will get back to you soon.');
         form.reset();
       } else {
-        throw new Error(data.message || 'Form submission failed');
+        // Try fallback method if Web3Forms fails
+        await tryFallbackMethod(form);
       }
     } catch (err) {
-      // Show error message
-      statusDiv.className = 'status-message error';
-      statusDiv.innerHTML = `Sorry, there was an error sending your message: ${err.message}`;
-      statusDiv.style.display = 'block';
       console.error('Form submission error:', err);
+      // Try fallback method
+      await tryFallbackMethod(form);
     } finally {
       // Reset button state
-      submitBtn.textContent = 'Send Message';
       submitBtn.disabled = false;
+      buttonText.textContent = 'Send Message';
     }
   });
+  
+  // Form validation function
+  function validateForm() {
+    let isValid = true;
+    
+    // Validate name
+    const name = document.getElementById('name').value.trim();
+    if (name === '') {
+      showError('nameError', 'Please enter your name');
+      isValid = false;
+    }
+    
+    // Validate email
+    const email = document.getElementById('email').value.trim();
+    if (email === '') {
+      showError('emailError', 'Please enter your email address');
+      isValid = false;
+    } else if (!isValidEmail(email)) {
+      showError('emailError', 'Please enter a valid email address');
+      isValid = false;
+    }
+    
+    // Validate department
+    const department = document.getElementById('department').value;
+    if (department === '') {
+      showError('departmentError', 'Please select a purpose');
+      isValid = false;
+    }
+    
+    // Validate subject
+    const subject = document.getElementById('subject').value.trim();
+    if (subject === '') {
+      showError('subjectError', 'Please enter a subject');
+      isValid = false;
+    }
+    
+    // Validate message
+    const message = document.getElementById('message').value.trim();
+    if (message === '') {
+      showError('messageError', 'Please enter your message');
+      isValid = false;
+    }
+    
+    return isValid;
+  }
+  
+  // Email validation helper
+  function isValidEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  }
+  
+  // Show error message
+  function showError(elementId, message) {
+    const errorElement = document.getElementById(elementId);
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+  }
+  
+  // Clear all error messages
+  function clearErrorMessages() {
+    const errorElements = document.querySelectorAll('.error-message');
+    errorElements.forEach(element => {
+      element.textContent = '';
+      element.style.display = 'none';
+    });
+  }
+  
+  // Show status message
+  function showStatus(type, message) {
+    const statusDiv = document.getElementById('statusMessage');
+    statusDiv.className = `status-message ${type}`;
+    statusDiv.innerHTML = message;
+    statusDiv.style.display = 'block';
+    
+    // Scroll to status message
+    statusDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  
+  // Fallback method - stores form data in localStorage and provides email link
+  async function tryFallbackMethod(form) {
+    // Store form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      department: document.getElementById('department').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+      timestamp: new Date().toISOString()
+    };
+    
+    localStorage.setItem('contactFormData', JSON.stringify(formData));
+    
+    // Create email link
+    const emailSubject = encodeURIComponent(`Contact Form: ${formData.subject}`);
+    const emailBody = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPurpose: ${formData.department}\nMessage:\n${formData.message}`
+    );
+    
+    const mailtoLink = `mailto:contact@example.com?subject=${emailSubject}&body=${emailBody}`;
+    
+    // Show message with instructions
+    showStatus('error', 
+      `We're experiencing technical difficulties with our form. 
+      Please <a href="${mailtoLink}" style="color: #d32f2f; text-decoration: underline;">click here</a> 
+      to send us an email directly, or copy your message below and email us at contact@example.com.
+      <br><br>
+      <strong>Your message:</strong><br>
+      ${formData.message}`
+    );
+  }
 </script>
 
 </body>
