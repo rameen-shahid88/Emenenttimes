@@ -1,100 +1,226 @@
 {
   "courses": [
     {
-      "title": "Calculus I - Differential Calculus",
-      "description": "Comprehensive introduction to limits, derivatives, and their applications. Includes lecture notes, problem sets, solution guides, and practice exams covering topics from basic limits to optimization problems.",
-      "keywords": "calculus differential mathematics math",
-      "link": "https://lms.nust.edu.pk/portal/"
+      "title": "Fundamentals of Programming",
+      "description": "Complete course materials on basic C++ fundamentals such as functions, conditional statements, loops, and pointers etc. Contains lecture slides, labs and assignments.",
+      "keywords": "c++ programming coding",
+      "link": "https://drive.google.com/drive/folders/1VyK--XxO76ETo08MCnIFEKJW_i0JKC9D?usp=drive_link"
     },
     {
-      "title": "Linear Algebra",
-      "description": "Complete course materials on vector spaces, matrices, eigenvalues, and linear transformations. Features step-by-step proofs, computational exercises, and real-world applications in engineering and computer science.",
-      "keywords": "linear algebra mathematics math matrices vectors",
-      "link": "#"
+      "title": "Logic and Sequential Circuit Design",
+      "description": "Complete course materials for Digital Logic Design. The course covers basic logic gates, sequential circuits, combinational logic, and hardware design.",
+      "keywords": "dld logic sequential",
+      "link": "https://drive.google.com/drive/folders/1iVnK_LERKSkv_7E3Ayy2mgeEMrCnkHSd?usp=drive_link"
     },
     {
-      "title": "Statistics & Probability",
-      "description": "Statistical analysis fundamentals including descriptive statistics, probability distributions, hypothesis testing, and regression analysis. Contains datasets, R/Python code examples, and comprehensive study materials.",
-      "keywords": "statistics probability mathematics math data",
-      "link": "#"
+      "title": "Ideology and Constitution of Pakistan",
+      "description": "More commonly known as Pakistan Studies. This course examines the significant events in Pakistan's history and aims to dissect the what's, why's, and how's.",
+      "keywords": "pakistan history",
+      "link": "https://drive.google.com/drive/folders/1yIVLJzzKsJuSm0-3P53gMgED5bGh-CZH?usp=drive_link"
     },
     {
+      "title": "Linear Algebra and ODEs",
+      "description": "This course introduces fundamental concepts of linear algebra, including matrices, vector spaces, and eigenvalues, alongside techniques for solving ordinary differential equations. Emphasis is placed on applications in engineering, physics, and computational problem-solving.",
+      "keywords": "linear algebra math",
+      "link": "https://drive.google.com/drive/folders/1fxlmy2uSHWjorLVSIdjnLMu14_ojj0Rt?usp=drive_link"
+    },
+    {
+      "title": "Workshop Practice",
+      "description": "From Welding to Woodworking, this course covers all the basics of creating thing from scratch. It gives major engineering vibes with the goggles and gloves so just enjoy.",
+      "keywords": "workshop",
+      "link": "https://drive.google.com/drive/folders/1hvJr0WGeo43hAw5ubPAicIiCOdeKPSXO?usp=drive_link"
+    },
+    {
+      "title": "Electrical Network Analysis",
+      "description": "This course covers the fundamental techniques for analyzing DC and AC electrical circuits, including network theorems, transient and steady-state analysis. Emphasis is placed on problem-solving and practical applications in electrical engineering systems.",
+      "keywords": "electrical ciruits",
+      "link": "https://drive.google.com/drive/folders/1vJVR7zEaFk8LktQrq84VPDY1nMLC59HK?usp=drive_link"
+    },
+    {
+      "title": "Computer Organization",
+      "description": "This course explores the structure and operation of digital computers, covering data representation, instruction sets, processor architecture, memory hierarchy, and input/output systems. Emphasis is placed on understanding how hardware components interact to execute programs efficiently.",
+      "keywords": "computer ict",
+      "link": "https://drive.google.com/drive/folders/1io3lZ8S_xMIyZ3NWEFiiGermNlfUKgoh?usp=drive_link"
+    },
+    {
+      "title": "Calculus And Analytic Geometry",
+      "description": "This course introduces limits, continuity, differentiation, and integration, along with their applications to real-world problems. It also covers analytic geometry concepts, including conic sections and curves, to strengthen mathematical foundations for engineering and science.",
+      "keywords": "math calculus",
+      "link": "https://drive.google.com/drive/folders/1oOiMfiS5nsBWW5herJBz0PxPltRZQG3g?usp=drive_link"
+    },
+    {
+      "title": "Functional English",
+      "description": "This course focuses on developing essential communication skills in reading, writing, listening, and speaking. Emphasis is placed on grammar, vocabulary, and practical usage to enhance academic and professional effectiveness.",
+      "keywords": "english humanities",
+      "link": "https://drive.google.com/drive/folders/16GEHj44flxFQRTZAGkqf-0DhPNy9Wxbh?usp=drive_link"
+    },
+    {
+      "title": "Engineering Drawing",
+      "description": "This course introduces the principles of technical drawing, including orthographic projection, isometric views, and dimensioning. Students learn to represent engineering objects accurately and interpret drawings as a universal language of engineering design.",
+      "keywords": "drawing engineering",
+      "link": "https://drive.google.com/drive/folders/1tN8qhY402o_NZTwCOOnU9oZKWZwWdLuF?usp=drive_link"
+    },
+    {
+      "title": "Applied Physics",
+      "description": "This course covers fundamental physics concepts with a focus on their practical applications in engineering. Topics include mechanics, heat, electricity, magnetism, and modern physics, providing a strong foundation for technological problem-solving.",
+      "keywords": "applied physics",
+      "link": "https://drive.google.com/drive/folders/1vrcwkWb0whX7VmPbHLrBDjEyRa0COGxZ?usp=drive_link"
+    },
+     {
+      "title": "Linear Circuit Analysis",
+      "description": "This course introduces the principles and techniques for analyzing linear electrical circuits, including resistive, capacitive, and inductive elements. Emphasis is placed on circuit laws, network theorems, transient and steady-state analysis, and their engineering applications.",
+      "keywords": "linear circuit electrical",
+      "link": "https://drive.google.com/drive/folders/1G6DnbxgaDANbwgQT-oZoKfnHaIoSNkFe?usp=drive_link"
+    },
+    {
+      "title": "Occupational Health and Safety",
+      "description": "This course provides an understanding of workplace hazards, risk assessment, and safety management practices. Emphasis is placed on health regulations, accident prevention, and creating safe working environments in engineering and industry.",
+      "keywords": "ohs engineering management",
+      "link": "https://drive.google.com/drive/folders/1_C3Rq7s35Isx8QsFomC0N6gfsc6bFGiI?usp=drive_link"
+    },
+    {
+      "title": "Engineering Mechanics",
+      "description": "This course introduces the principles of statics and dynamics, focusing on the analysis of forces, equilibrium, motion, and energy. Emphasis is placed on applying mechanics to solve engineering problems in structures and machinery.",
+      "keywords": "engineering mechanics",
+      "link": "https://drive.google.com/drive/folders/1EmCIfP8tO1BrX_YDgWp8lKSC21KNiSlS?usp=drive_link"
+    },
+     {
+      "title": "Object Oriented Programming",
+      "description": "This course covers the principles of object-oriented programming, including classes, objects, inheritance, polymorphism, and encapsulation. Emphasis is placed on problem-solving and designing efficient, reusable software using real-world applications.",
+      "keywords": "oop programming object",
+      "link": "https://drive.google.com/drive/folders/1Kb28nMjFv3yYnsrj42rPtJXXo4MxUqn0?usp=drive_link"
+    },
+     {
+      "title": "Communication Skills",
+      "description": "This course develops effective verbal, non-verbal, and written communication for academic, professional, and social contexts. Emphasis is placed on presentations, group discussions, report writing, and interpersonal communication to enhance confidence and clarity.",
+      "keywords": "comm communication english",
+      "link": "https://drive.google.com/drive/folders/1ZTGobxRD7i_SDkx29faKieNZJhxCENnr?usp=drive_link"
+    },
+     {
       "title": "Discrete Mathematics",
-      "description": "Essential mathematical foundations for computer science including logic, set theory, graph theory, and combinatorics. Perfect preparation for advanced algorithms and theoretical computer science courses.",
-      "keywords": "discrete mathematics math logic computer science",
-      "link": "#"
+      "description": "This course introduces fundamental concepts of discrete structures, including logic, sets, relations, functions, combinatorics, graphs, and algorithms. Emphasis is placed on developing problem-solving skills and applying mathematical reasoning in computer science and engineering.",
+      "keywords": "math discrete",
+      "link": "https://drive.google.com/drive/folders/1doXjHiPVsWQRbypZ6W3vDPJ2U3ysjKx0?usp=drive_link"
     },
     {
-      "title": "Organic Chemistry",
-      "description": "Comprehensive organic chemistry materials covering reaction mechanisms, synthesis strategies, and spectroscopic analysis. Includes reaction summaries, mechanism practice problems, and laboratory procedures.",
-      "keywords": "organic chemistry science lab reactions",
-      "link": "#"
+      "title": "Computer Graphics",
+      "description": "This course explores the principles and techniques of computer graphics, including 2D/3D transformations, projections, and rendering. Emphasis is placed on graphical algorithms and their applications in simulations, modeling, and interactive systems.",
+      "keywords": "cg graphics computer",
+      "link": "https://drive.google.com/drive/folders/1P7yvhJ-l6Av6zSs4es-bP3SXJOzRpMFj?usp=drive_link"
+    },
+     {
+      "title": "Electronic Devices and Circuits",
+      "description": "This course introduces the characteristics and applications of electronic devices such as diodes, transistors, and operational amplifiers. Emphasis is placed on circuit analysis, design, and practical applications in analog and digital electronics.",
+      "keywords": "edc electronics electrical",
+      "link": "https://drive.google.com/drive/folders/1_gINc74zXpO075i-NxNt4xylYb7fzPcG?usp=drive_link"
+    },
+     {
+      "title": "Computer System Architecture",
+      "description": "This course examines the organization and design of computer systems, covering instruction sets, CPU architecture, memory hierarchy, and input/output structures. Emphasis is placed on understanding how hardware and software interact to execute programs efficiently.",
+      "keywords": "computer architecture hardware",
+      "link": "https://drive.google.com/drive/folders/1Ejscv_B9e5DUojBpWveshPtB4PzSSZga?usp=drive_link"
     },
     {
-      "title": "General Physics I - Mechanics",
-      "description": "Classical mechanics from kinematics to rotational dynamics. Features problem-solving strategies, conceptual explanations, laboratory exercises, and mathematical derivations with worked examples.",
-      "keywords": "physics mechanics science kinematics dynamics",
-      "link": "#"
+      "title": "Operating Systems",
+      "description": "This course introduces the fundamental concepts of operating systems, including process management, memory management, file systems, and device handling. Emphasis is placed on concurrency, resource allocation, and the role of the OS in efficient computer system operation.",
+      "keywords": "os computer operating",
+      "link": "https://drive.google.com/drive/folders/18UOqEzUoG8kSJRbwj0D42xmuE_zQVTey?usp=drive_link"
     },
     {
-      "title": "Molecular Biology",
-      "description": "Modern molecular biology techniques and concepts including DNA replication, gene expression, and protein synthesis. Contains research papers, laboratory protocols, and current biotechnology applications.",
-      "keywords": "molecular biology science dna genetics",
-      "link": "#"
+      "title": "Complex Variables and Transforms",
+      "description": "This course covers the fundamentals of complex numbers, analytic functions, and conformal mappings, along with Laplace and Fourier transforms. Emphasis is placed on solving engineering and applied science problems using complex analysis and transformation techniques.",
+      "keywords": "cvt maths",
+      "link": "https://drive.google.com/drive/folders/1fNYN7W7Ncakn9p4IJoFkM0utBFdRvYH5?usp=drive_link"
     },
     {
-      "title": "Environmental Science",
-      "description": "Interdisciplinary approach to environmental issues including climate change, pollution control, and sustainable development. Features case studies, policy analyses, and field research methodologies.",
-      "keywords": "environmental science ecology climate sustainability",
-      "link": "#"
+      "title": "Data Structures and Algorithms",
+      "description": "This course introduces fundamental data structures such as arrays, linked lists, stacks, queues, trees, and graphs, along with algorithm design and analysis techniques. Emphasis is placed on problem-solving, efficiency, and applications in computer science and engineering.",
+      "keywords": "ds data programming",
+      "link": "https://drive.google.com/drive/folders/1iVMwhCH1iwgIWs-ppS3pXPD_OfOixIWV?usp=drive_link"
     },
-    {
-      "title": "World Literature",
-      "description": "Comprehensive study of global literary traditions from ancient epics to contemporary works. Includes critical essays, historical context materials, discussion guides, and comparative analysis frameworks.",
-      "keywords": "literature english humanities writing poetry",
-      "link": "#"
+     {
+      "title": "Technical and Business Writing",
+      "description": "This course develops skills in writing clear, concise, and professional documents for technical and business contexts. Emphasis is placed on reports, proposals, presentations, and workplace communication tailored to academic and industry needs.",
+      "keywords": "tbw english",
+      "link": "https://drive.google.com/drive/folders/158usAyy29DfyL1v8WybZLq7aCHNC8Pon?usp=drive_link"
     },
-    {
-      "title": "Modern European History",
-      "description": "Detailed examination of European history from the Renaissance to present day. Contains primary source documents, timeline summaries, biographical profiles, and analytical essay examples.",
-      "keywords": "history european humanities renaissance modern",
-      "link": "#"
+     {
+      "title": "Microprocessor and Microcontroller Based Design",
+      "description": "This course focuses on the architecture, programming, and interfacing of microprocessors and microcontrollers. Emphasis is placed on designing embedded systems and practical applications in control, automation, and real-time processing.",
+      "keywords": "mmbd microcontrollers embedded",
+      "link": "https://drive.google.com/drive/folders/1AXg8EEpRBvVQ0NxlzAR_DXTWoJcf5K6N?usp=drive_link"
     },
-    {
-      "title": "Philosophy of Mind",
-      "description": "Exploration of consciousness, personal identity, and the mind-body problem. Features philosophical texts, argument analysis templates, and contemporary debates in cognitive science and artificial intelligence.",
-      "keywords": "philosophy mind consciousness humanities cognitive",
-      "link": "#"
+     {
+      "title": "Computer Networks",
+      "description": "This course introduces the principles of computer networking, including network models, protocols, switching, routing, and data communication. Emphasis is placed on the design, operation, and security of modern wired and wireless networks.",
+      "keywords": "cn network computer",
+      "link": "https://drive.google.com/drive/folders/1wElYkKzomi-CglfVsR6yoNrJ6pCiRct1?usp=drive_link"
     },
-    {
-      "title": "Cultural Anthropology",
-      "description": "Study of human societies and cultural practices across the globe. Includes ethnographic studies, fieldwork methodologies, theoretical frameworks, and cross-cultural comparison tools.",
-      "keywords": "anthropology cultural humanities society ethnography",
-      "link": "#"
+     {
+      "title": "Numerical Methods",
+      "description": "This course covers numerical techniques for solving mathematical problems, including root finding, interpolation, numerical differentiation and integration, and solving differential equations. Emphasis is placed on algorithm development and applications in engineering and science.",
+      "keywords": "nm numerical math",
+      "link": "https://drive.google.com/drive/folders/1OMjszK1DLhQn2LxDL8NZ7geR2GCn3bok?usp=drive_link"
     },
-    {
-      "title": "Data Structures & Algorithms",
-      "description": "Fundamental computer science concepts including arrays, linked lists, trees, graphs, and algorithmic analysis. Contains code implementations in multiple languages, complexity analysis, and interview preparation materials.",
-      "keywords": "data structures algorithms computer science programming",
-      "link": "#"
+     {
+      "title": "Signal and Systems",
+      "description": "This course introduces the representation, analysis, and classification of continuous-time and discrete-time signals and systems. Emphasis is placed on convolution, Fourier analysis, Laplace and Z-transforms, and their applications in engineering.",
+      "keywords": "sns electrical signals",
+      "link": "https://drive.google.com/drive/folders/1FKx9sUIv4u0PbWCTZ2vFBC3GIK7wIUVT?usp=drive_link"
     },
-    {
-      "title": "Machine Learning Fundamentals",
-      "description": "Introduction to supervised and unsupervised learning algorithms including regression, classification, and clustering. Features Python/R implementations, datasets, and practical project examples.",
-      "keywords": "machine learning artificial intelligence computer science python",
-      "link": "#"
+     {
+      "title": "Digital Signal Processing",
+      "description": "This course covers the fundamentals of digital signal analysis and processing, including sampling, discrete-time Fourier analysis, and digital filter design. Emphasis is placed on practical applications in communications, audio, image, and real-time signal processing.",
+      "keywords": "dsp signal processing",
+      "link": "https://drive.google.com/drive/folders/1wY4S3xLHCJB-9ofXqmhdCT9p2-pL-_GS?usp=drive_link"
     },
-    {
-      "title": "Web Development",
-      "description": "Complete full-stack web development course covering HTML, CSS, JavaScript, and modern frameworks. Includes project templates, deployment guides, and industry best practices for responsive design.",
-      "keywords": "web development programming html css javascript",
-      "link": "#"
+     {
+      "title": "Professional Ethics",
+      "description": "This course explores ethical theories, professional responsibilities, and decision-making frameworks in engineering and technology. Emphasis is placed on integrity, accountability, and ethical practices in professional and societal contexts.",
+      "keywords": "ethics professional engineering",
+      "link": "https://drive.google.com/drive/folders/1DyQw2GQt5VfYq-m19DO0iZ5qTwX3nLen?usp=drive_link"
     },
-    {
-      "title": "Database Management Systems",
-      "description": "Comprehensive database design and management including SQL, normalization, and performance optimization. Contains database schemas, query examples, and real-world application case studies.",
-      "keywords": "database management systems sql programming",
-      "link": "#"
+     {
+      "title": "Database Engineering",
+      "description": "This course introduces the principles of database design, modeling, and implementation, including relational models, SQL, and normalization. Emphasis is placed on efficient data management, integrity, and applications in modern information systems.",
+      "keywords": "sql database",
+      "link": "https://drive.google.com/drive/folders/1YFuMxkhu25PVAQ2cVfVf5F4y2YXQ9YzQ?usp=drive_link"
+    },
+     {
+      "title": "Probability and Statistics",
+      "description": "This course introduces the fundamentals of probability theory, random variables, distributions, and statistical methods. Emphasis is placed on data analysis, hypothesis testing, and applications in engineering and applied sciences.",
+      "keywords": "stats probability maths",
+      "link": "https://drive.google.com/drive/folders/10jy9CSZCJr2Me7qZy5jX-r8VkS-KyGlD?usp=drive_link"
+    },
+     {
+      "title": "Digital Image Processing",
+      "description": "This course covers the fundamentals of image representation, enhancement, restoration, compression, and segmentation. Emphasis is placed on applying image processing techniques in areas such as computer vision, medical imaging, and multimedia applications.",
+      "keywords": "dip image processing computer",
+      "link": "https://drive.google.com/drive/folders/1t1wHtIHnV0Cm5_WKTjRa_eo_btf6qVB_?usp=drive_link"
+    },
+     {
+      "title": "Software Engineering",
+      "description": "This course introduces the principles and methodologies of software development, including requirements analysis, design, testing, and maintenance. Emphasis is placed on software development life cycles, project management, and building reliable, efficient software systems.",
+      "keywords": "se software computer",
+      "link": "https://drive.google.com/drive/folders/17QfdBwkmN2qEHiMZIGqdtq0CwMHso8eL?usp=drive_link"
+    },
+     {
+      "title": "Digital System Design",
+      "description": "This course focuses on the principles of designing and analyzing digital systems using combinational and sequential logic. Emphasis is placed on hardware description languages, programmable logic devices, and practical applications in modern digital design.",
+      "keywords": "dsd systems design computer",
+      "link": "https://drive.google.com/drive/folders/1UfcIL1CGg1Efoehs-QPDChXklxlv3Jhn?usp=drive_link"
+    },
+     {
+      "title": "Engineering Project Management",
+      "description": "This course introduces the principles and practices of managing engineering projects, including planning, scheduling, budgeting, and risk management. Emphasis is placed on project life cycles, teamwork, and effective use of tools and techniques to achieve project goals.",
+      "keywords": "epe engineering project",
+      "link": "https://drive.google.com/drive/folders/1n3uaZQM8ODIF9eB-BvvjX6LcqEEfe_KU?usp=drive_link"
+    },
+     {
+      "title": "Linear Control Systems",
+      "description": "This course covers the modeling, analysis, and design of linear control systems using time-domain and frequency-domain techniques. Emphasis is placed on system stability, feedback control, and applications in engineering systems.",
+      "keywords": "lcs linear electric",
+      "link": "https://drive.google.com/drive/folders/1P7591IVZa8T3oeYCabGPLgryBlOMP4v5?usp=drive_link"
     }
   ]
 }
