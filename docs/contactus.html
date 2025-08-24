@@ -415,29 +415,6 @@
     font-size: 0.9rem;
   }
 
-  /* Form status messages */
-  .form-status {
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 4px;
-    text-align: center;
-    display: none;
-  }
-  
-  .form-status.success {
-    background-color: rgba(46, 125, 50, 0.1);
-    border: 1px solid #2e7d32;
-    color: #2e7d32;
-    display: block;
-  }
-  
-  .form-status.error {
-    background-color: rgba(211, 47, 47, 0.1);
-    border: 1px solid #d32f2f;
-    color: #d32f2f;
-    display: block;
-  }
-
   @media (max-width: 768px) {
     .contact-container {
       gap: 20px;
@@ -536,10 +513,6 @@
   <div class="contact-container">
     <div class="contact-form">
       <h2>Send Us a Message</h2>
-      
-      <!-- Status messages -->
-      <div id="formStatus" class="form-status"></div>
-      
       <form id="contactForm">
         <div class="form-group">
           <label for="name">Your Name</label>
@@ -555,12 +528,12 @@
           <label for="department">Purpose</label>
           <select id="department" class="form-control" required>
             <option value="">Select a purpose</option>
-            <option value="Bug Report">Bug Report</option>
-            <option value="Resource Submission">Resource Submission</option>
-            <option value="Blog Entry">Blog Entry</option>
-            <option value="Feature Request">Feature Request</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Other">Other</option>
+            <option value="editorial">Bug Report</option>
+            <option value="news-tips">Resource Submission</option>
+            <option value="advertising">Blog Entry</option>
+            <option value="general">Feature Request</option>
+            <option value="general">Feedback</option>
+            <option value="other">Other</option>
           </select>
         </div>
         
@@ -574,7 +547,7 @@
           <textarea id="message" class="form-control" required></textarea>
         </div>
         
-        <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
+        <button type="submit" class="submit-btn">Send Message</button>
       </form>
       
       <div class="response-time">
@@ -626,17 +599,7 @@
   document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
-    // Get form elements
-    const form = e.target;
-    const submitBtn = document.getElementById('submitBtn');
-    const statusDiv = document.getElementById('formStatus');
-    
-    // Show loading state
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    statusDiv.style.display = 'none';
-    
-    const formData = {
+    const data = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       department: document.getElementById('department').value,
@@ -645,39 +608,17 @@
     };
 
     try {
-      // Using FormSubmit.co service - a free form backend
-      const res = await fetch("https://formsubmit.co/ajax/rameen.shahid81@gmail.com", {
+      const res = await fetch("http://localhost:5000/send", {
         method: "POST",
-        headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
       });
 
-      const data = await res.json();
-      
-      if (data.success === "true") {
-        // Show success message
-        statusDiv.className = 'form-status success';
-        statusDiv.innerHTML = 'Message sent successfully! We will get back to you soon.';
-        statusDiv.style.display = 'block';
-        
-        // Reset form
-        form.reset();
-      } else {
-        throw new Error('Submission failed');
-      }
+      const text = await res.text();
+      alert(text);
+      this.reset();
     } catch (err) {
-      // Show error message
-      statusDiv.className = 'form-status error';
-      statusDiv.innerHTML = 'Sorry, there was an error sending your message. Please try again later or email us directly.';
-      statusDiv.style.display = 'block';
-      console.error('Form submission error:', err);
-    } finally {
-      // Reset button state
-      submitBtn.textContent = 'Send Message';
-      submitBtn.disabled = false;
+      alert("Failed to send message.");
     }
   });
 </script>
