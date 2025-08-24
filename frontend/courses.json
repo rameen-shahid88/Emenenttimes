@@ -221,6 +221,138 @@
       "description": "This course covers the modeling, analysis, and design of linear control systems using time-domain and frequency-domain techniques. Emphasis is placed on system stability, feedback control, and applications in engineering systems.",
       "keywords": "lcs linear electric",
       "link": "https://drive.google.com/drive/folders/1P7591IVZa8T3oeYCabGPLgryBlOMP4v5?usp=drive_link"
+    },
+    {
+      "title": "Islamic Studies",
+      "description": "This course provides an overview of the fundamental teachings of Islam, including beliefs, worship, and moral values. Emphasis is placed on the application of Islamic principles to personal development, society, and contemporary issues.",
+      "keywords": "islamic humanities islamiat",
+      "link": "https://drive.google.com/drive/folders/1IKGPzO0Dvq83RtqtDCdLa8CeItm2XUXL?usp=drive_link"
+    },
+     {
+      "title": "Islamic Studies",
+      "description": "This course provides an overview of the fundamental teachings of Islam, including beliefs, worship, and moral values. Emphasis is placed on the application of Islamic principles to personal development, society, and contemporary issues.",
+      "keywords": "islamic humanities islamiat",
+      "link": "https://drive.google.com/drive/folders/1IKGPzO0Dvq83RtqtDCdLa8CeItm2XUXL?usp=drive_link"
+    },
+     {
+      "title": "Engineering Economics",
+      "description": "This course introduces economic principles and analytical techniques for evaluating engineering projects, including cost analysis, cash flow, and investment appraisal. Emphasis is placed on decision-making to ensure cost-effective and sustainable engineering solutions.",
+      "keywords": "engineering economics",
+      "link": "https://drive.google.com/drive/folders/1EtGl4FsMwB2iRrUuku6xI6ZRVU4AczYC?usp=drive_link"
+    },
+    {
+      "title": "Entrepreneurship",
+      "description": "This course explores the fundamentals of entrepreneurship, including idea generation, business planning, financing, and innovation. Emphasis is placed on developing entrepreneurial skills to create, manage, and grow successful ventures.",
+      "keywords": "entrepreneurship ",
+      "link": "https://drive.google.com/drive/folders/1adXw3nQjaCCIL5iwjWDrLq-ZwiIyJ2aw?usp=drive_link"
+    },
+    {
+      "title": "Engineering Statics",
+      "description": "This course introduces the principles of statics, focusing on the analysis of forces, moments, and equilibrium in structures and mechanical systems. Emphasis is placed on free-body diagrams, structural analysis, and applications in engineering design.",
+      "keywords": "engineering statics",
+      "link": "https://drive.google.com/drive/folders/1IU9vd-gIOCLqMtcdMix-ct6nZxeRf3Dl?usp=drive_link"
+    },
+    {
+      "title": "Electrical Circuit Analysis",
+      "description": "This course covers the fundamental concepts and techniques for analyzing DC and AC electrical circuits. Emphasis is placed on circuit laws, network theorems, transient and steady-state responses, and practical engineering applications.",
+      "keywords": "electrical circuit",
+      "link": "https://drive.google.com/drive/folders/16hccBDuXsJduiJy6scWklSaxADaiVAOC?usp=drive_link"
+    },
+     {
+      "title": "Engineering Dynamics",
+      "description": "This course focuses on the study of particles and rigid body motion under the action of forces. Emphasis is placed on kinematics, kinetics, work-energy, and impulse-momentum principles with applications in engineering systems.",
+      "keywords": "dynamics engineering",
+      "link": "https://drive.google.com/drive/folders/1AuliGc_oLMIeBlEDQoYaG3bqBXwLgVDj?usp=drive_link"
+    },
+      {
+      "title": "Solid Modeling",
+      "description": "This course introduces the fundamentals of 3D solid modeling and computer-aided design (CAD). Emphasis is placed on creating, visualizing, and analyzing engineering components for design and manufacturing applications",
+      "keywords": "cad solid modeling mechanical",
+      "link": "https://drive.google.com/drive/folders/1fURzd0Mn-jaxB8vmGETARi0_1Naaq4g5?usp=drive_link"
+    },
+    {
+      "title": "Materials and Manufacturinf Processes",
+      "description": "This course covers the properties, selection, and behavior of engineering materials along with fundamental manufacturing processes. Emphasis is placed on machining, casting, forming, joining, and modern manufacturing techniques used in engineering applications.",
+      "keywords": "materials manufacturing mechanical",
+      "link": "https://drive.google.com/drive/folders/1IpCU475X-ayIyLS7xNXWXkk5LtRbu6rN?usp=drive_link"
+    },
+     {
+      "title": "Electronic Circuit Design",
+      "description": "This course focuses on the analysis and design of analog and digital electronic circuits using devices such as diodes, transistors, and operational amplifiers. Emphasis is placed on practical design, simulation, and applications in modern electronic systems.",
+      "keywords": "electrical circuit design",
+      "link": "https://drive.google.com/drive/folders/1EyccVLQTju5ko08xEQE07fD4hbHFwMTy?usp=drive_link"
+    },
+     {
+      "title": "Mechanics of Materials",
+      "description": "This course introduces the behavior of solid materials under various types of loading, including tension, compression, torsion, bending, and shear. Emphasis is placed on stress, strain, and deformation analysis for safe and efficient structural and mechanical design.",
+      "keywords": "mechanics mechanical materials",
+      "link": "https://drive.google.com/drive/folders/1DH3deI-jwJeLZp52W-urDkFXTKLXcmQo?usp=drive_link"
+    },
+     {
+      "title": "Theory of Machines",
+      "description": "This course studies the kinematics and dynamics of machines and mechanisms. Emphasis is placed on motion analysis, cams, gears, flywheels, and balancing, with applications in mechanical system design and automation.",
+      "keywords": "machines mechanical",
+      "link": "https://drive.google.com/drive/folders/1WufUU5R-8svtvYODCZJpGtHsSoythblq?usp=drive_link"
+    },
+     {
+      "title": "Actuating Systems",
+      "description": "This course introduces the principles, types, and applications of actuators used in mechanical and mechatronic systems. Emphasis is placed on hydraulic, pneumatic, and electric actuation, including control and performance analysis.",
+      "keywords": "actuating systems",
+      "link": "https://drive.google.com/drive/folders/1gz3-WSowSLUUlw3r71JK96szHgYgqGWj?usp=drive_link"
+    },
+     {
+      "title": "Instrumentation and Measurements",
+      "description": "This course covers the principles and techniques of measuring physical quantities using electrical and mechanical instruments. Emphasis is placed on sensor technologies, signal processing, accuracy, calibration, and applications in engineering systems.",
+      "keywords": "instrumentation and measurement",
+      "link": "https://drive.google.com/drive/folders/14by86Y6kzFld60YId0iqCZxAygMqXs0F?usp=drive_link"
+    },
+     {
+      "title": "Electromagnetic Field Theory",
+      "description": "This course explores the fundamentals of electric and magnetic fields, including Maxwell's equations, electrostatics, magnetostatics, and wave propagation. Emphasis is placed on analyzing and applying electromagnetic principles in engineering systems and devices.",
+      "keywords": "mechanical electromagnetic",
+      "link": "https://drive.google.com/drive/folders/1GWzJjMUXsJwrLLVth12HXCJ7hdg9QqvK?usp=drive_link"
+    },
+      {
+      "title": "Electrical Machines",
+      "description": "This course covers the principles, construction, and operation of electrical machines, including transformers, DC machines, and AC machines. Emphasis is placed on performance analysis, control, and applications in power and industrial systems.",
+      "keywords": "electrical machines",
+      "link": "https://drive.google.com/drive/folders/1B3F7vVm4MilVibwOFaf7lO0oqTvgiE8C?usp=drive_link"
+    },
+      {
+      "title": "Wave Propagation and Antennas",
+      "description": "This course explores the principles of electromagnetic wave propagation and antenna theory. Emphasis is placed on wave behavior in different media, antenna types, radiation patterns, and applications in communication and radar systems.",
+      "keywords": "waves antennas",
+      "link": "https://drive.google.com/drive/folders/1_C-KAklHcrG-SkBSV-75f27OxFgqElq5?usp=drive_link"
+    },
+      {
+      "title": "Communication Systems",
+      "description": "This course introduces the principles and techniques of analog and digital communication. Emphasis is placed on modulation, demodulation, signal transmission, noise analysis, and the design of efficient communication systems.",
+      "keywords": "communication systems",
+      "link": "https://drive.google.com/drive/folders/1cnTMgd7iRaHMD0udKqUDDhmW-2ASaJwS?usp=drive_link"
+    },
+      {
+      "title": "Thermodynamics",
+      "description": "This course covers the fundamental principles of energy, work, heat, and the laws of thermodynamics. Emphasis is placed on analyzing thermodynamic systems, cycles, and processes for engineering applications.",
+      "keywords": "thermodynamics mechanical",
+      "link": "https://drive.google.com/drive/folders/1jMQxQ39BA2-HL1lRu6UDzLtoqfRIC0TC?usp=drive_link"
+    },
+     {
+      "title": "Power Electronics",
+      "description": "This course focuses on the study and application of electronic devices and circuits for controlling and converting electrical power. Emphasis is placed on rectifiers, inverters, converters, and their use in industrial and renewable energy systems.",
+      "keywords": "electronics power",
+      "link": "https://drive.google.com/drive/folders/1-sc54Rj2fwvzNxRmNQCuMf2Pg_EA0VVd?usp=drive_link"
+    },
+      {
+      "title": "Vector Calculus",
+      "description": "This course introduces the calculus of vector fields, including differentiation, integration, gradient, divergence, curl, and line and surface integrals. Emphasis is placed on applications in physics, engineering, and applied mathematics.",
+      "keywords": "math vector calculus",
+      "link": "https://drive.google.com/drive/folders/1GfDu7E5K5HitmWPcW0k6Kc8KRjWipAyX?usp=drive_link"
+    },
+        {
+      "title": "Microcontroller and Embedded Systems",
+      "description": "This course covers the architecture, programming, and interfacing of microcontrollers in embedded systems. Emphasis is placed on real-time applications, system design, and integration of hardware and software for automation and control.",
+      "keywords": "micontroller embedded system",
+      "link": "https://drive.google.com/drive/folders/17JSDoBhnyuPmK6b56gm-F_dpkL1FsRsb?usp=drive_link"
     }
   ]
 }
