@@ -598,13 +598,13 @@
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // from EmailJS dashboard
+    emailjs.init("service_k9cg9zn"); // from EmailJS dashboard
   })();
 
   document.getElementById("contact-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    emailjs.send("service_k9cg9zn", "template_iofm3fw", {
       name: this.name.value,
       email: this.email.value,
       message: this.message.value,
