@@ -622,7 +622,27 @@
 
 <script>
   // Your existing date and menu functions remain the same
+    // Mobile menu functions
+  function openMobileMenu() {
+    document.getElementById("mobile-nav").classList.add("active");
+    document.getElementById("mobile-menu-container").classList.add("active");
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    document.getElementById("mobile-nav").classList.remove("active");
+    document.getElementById("mobile-menu-container").classList.remove("active");
+    document.body.style.overflow = 'auto';
+  }
+
+  // Close menu when clicking outside
+  document.getElementById('mobile-menu-container').addEventListener('click', closeMobileMenu);
   
+  // Prevent closing when clicking on the menu itself
+  document.getElementById('mobile-nav').addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+
   // Form validation and submission
   document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
