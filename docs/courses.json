@@ -325,7 +325,7 @@
       "link": "https://drive.google.com/drive/folders/1cnTMgd7iRaHMD0udKqUDDhmW-2ASaJwS?usp=drive_link"
     },
       {
-      "title": "Thermodynamics",
+      "title": "Thermodynamics I",
       "description": "This course covers the fundamental principles of energy, work, heat, and the laws of thermodynamics. Emphasis is placed on analyzing thermodynamic systems, cycles, and processes for engineering applications.",
       "keywords": "thermodynamics mechanical",
       "link": "https://drive.google.com/drive/folders/1jMQxQ39BA2-HL1lRu6UDzLtoqfRIC0TC?usp=drive_link"
@@ -353,6 +353,31 @@
       "description": "This course focuses on the principles and methodologies for designing mechanical components such as shafts, gears, bearings, springs, and fasteners. Emphasis is placed on ensuring strength, durability, and functionality for safe and efficient machine operation.",
       "keywords": "elements machines",
       "link": "https://drive.google.com/drive/folders/10d9HMTp1BaucMbBKwP1FdX4QcbDa6rhd?usp=drive_link"
+    },
+     {
+      "title": "Thermodynamics II",
+      "description": "Thermodynamics II explores advanced concepts of energy, entropy, and exergy with applications to power, refrigeration, and combustion systems. The course emphasizes real-world analysis of cycles, mixtures, and chemical reactions in thermal systems.",
+      "keywords": "thermo mechanical",
+      "link": "https://drive.google.com/drive/folders/1m_Ux7tsIipzRVQ5Vjh2x81yDySCTrbR5?usp=sharing"
+    },
+     {
+      "title": "Fluid Mechanics",
+      "description": "Fluid Mechanics introduces the principles governing fluid statics and dynamics, covering topics such as pressure, buoyancy, fluid flow, and applications in engineering systems.",
+      "keywords": "fluid mechanical",
+      "link": "https://drive.google.com/drive/folders/1p1fHQLLqtD266g_hYlqyrTth2juX9qO0?usp=sharing"
+    },
+     {
+      "title": "Machine Learning",
+      "description": "Machine Learning covers fundamental concepts and techniques for building predictive models, including supervised and unsupervised learning, model evaluation, and real-world applications across engineering and data-driven systems.",
+      "keywords": "ml computer mechanical",
+      "link": "https://drive.google.com/drive/folders/1mT7xZ_a0WksJuwpDnQyfaxyouiRN8Q3s?usp=sharing"
+    },
+      {
+      "title": "Robotics and Automation",
+      "description": "Robotics and Automation introduces the principles of robotic systems, kinematics, sensors, actuators, and control, with applications in industrial automation and intelligent machines.",
+      "keywords": "rob mechanical",
+      "link": "https://drive.google.com/drive/folders/19hObrJDl0R7l_RwhjqEV63-gTZLKXt90?usp=sharing"
     }
   ]
+
 }
